@@ -13,6 +13,7 @@ public class MilkTeaTest {
     @Test
     public void milkTeaTest()
     {
+        System.out.println("---------------- [Test] MilkTea ----------------");
         MilkTeaMachine machine=new MilkTeaMachine();
         MilkTea mt;
         System.out.println("Template milk tea:");
@@ -27,5 +28,6 @@ public class MilkTeaTest {
         System.out.println(mt.getInf());
         mt=machine.getMilkTea("Cold LittleSuger Pearl");
         System.out.println(mt.getInf());
+        System.out.println("-------------------- [End] --------------------");
     }
 }
