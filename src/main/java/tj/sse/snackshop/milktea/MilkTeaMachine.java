@@ -15,7 +15,7 @@ public class MilkTeaMachine {
      * @class MilkTeaMachine
      * @method getMilkTea
      * @description 输入奶茶名获取奶茶
-     * @param [milkTeaName]
+     * @param milkTeaName
      * @return tj.sse.SnackShop.MilkTea.MilkTea
      * */
     public MilkTea getMilkTea(String milkTeaName){

@@ -1,7 +1,4 @@
-package tj.sse.SnackShop.Icecream;
-
-import tj.sse.SnackShop.Icecream.Flavour;
-import tj.sse.SnackShop.Icecream.Icecream;
+package tj.sse.snackshop.icecream;
 
 /**
  * @Classname Adapter

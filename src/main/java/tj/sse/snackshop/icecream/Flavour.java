@@ -1,4 +1,4 @@
-package tj.sse.SnackShop.Icecream;
+package tj.sse.snackshop.icecream;
 
 /**
  * @Classname Flavour
