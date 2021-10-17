@@ -1,4 +1,7 @@
-package tj.sse;
+//Author: Yang Jing
+//Date：2021.10.18
+
+package tj.sse.Souvenir.Mediator;
 
 import javax.swing.*;
 import java.awt.*;
@@ -7,15 +10,20 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Platform {
-    public static void main(String[] args) {
+    public void start(){
+        System.out.println("——————————————欢迎来到周边售卖平台——————————————\n");
+    };
+    public void chat() {
         Medium md = new SouvenirMedium();
         Customer member1, member2;
-        member1 = new Seller("HarryPotter周边客服");
-        member2 = new Buyer("一位普通的游客");
+        member1 = new Seller("周边售卖客服");
+        member2 = new Buyer("一位游客");
         md.register(member1); //客户注册
         md.register(member2);
+    };
+    public void end(){
+        System.out.println("——————————————本次平台对话结束——————————————\n");
     }
 }
 
