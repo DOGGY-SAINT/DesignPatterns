@@ -1,4 +1,4 @@
-package tj.sse.SnackShop.MilkTea;
+package tj.sse.snackshop.milktea;
 
 import org.junit.Test;
 

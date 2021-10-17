@@ -1,29 +1,29 @@
-package tj.sse.SnackShop.MilkTea;
+package tj.sse.snackshop.milktea;
 
 /**
  * @author DOGGY_LEE
- * @date 2021/10/15 16:31
- * @description 经典珍珠奶茶机，建造者模式
+ * @date 2021/10/15 18:38
+ * @description 经典椰果奶茶机，建造者模式
  */
-public class PearlMilkTeaMaker implements MilkTeaMaker{
+public class CocountMilkTeaMaker implements MilkTeaMaker{
     /**
-     * @description 奶茶,热,半糖,珍珠
+     * @description 奶茶,冰,少糖,椰果
      * */
     private MilkTea milkTea;
 
     @Override
     public void setIce(String Ice) {
-        milkTea=new HotMilkTea();
+        milkTea=new ColdMilkTea();
     }
 
     @Override
     public void setSweatness(String sweatness) {
-        milkTea.setSweetness(new HalfSuger());
+        milkTea.setSweetness(new LittleSuger());
     }
 
     @Override
     public void setItem(String item) {
-        milkTea.setItem(new Pearl());
+        milkTea.setItem(new Cocount());
     }
 
     @Override
