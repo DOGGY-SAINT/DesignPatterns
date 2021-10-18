@@ -1,4 +1,4 @@
-package tj.sse.UniversalResort;
+package tj.sse.universalresort;
 
 /**
  * @author DOGGY_LEE
@@ -7,13 +7,19 @@ package tj.sse.UniversalResort;
  */
 public class UniversalResort {
     /**
+     * @description 影城实例
+     * */
+    private static UniversalResort instance=new UniversalResort();
+    /**
      * @class UniversalResort
      * @method UniversalResort
      * @description 构造函数私有化禁止调用
      * @param []
      * @return
      * */
-    private UniversalResort();
+    private UniversalResort(){
+        init();
+    }
 
     /**
      * @class UniversalResort
@@ -22,7 +28,7 @@ public class UniversalResort {
      * @param []
      * @return void
      * */
-    private void init();
+    private void init(){}
 
     /**
      * @class UniversalResort
@@ -31,5 +37,5 @@ public class UniversalResort {
      * @param []
      * @return tj.sse.UniversalResort.UniversalResort
      * */
-    public static UniversalResort getInstance();
+    public static UniversalResort getInstance(){return instance;}
 }

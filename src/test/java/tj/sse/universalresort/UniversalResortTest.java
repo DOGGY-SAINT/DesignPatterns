@@ -1,4 +1,4 @@
-package tj.sse.UniversalResort;
+package tj.sse.universalresort;
 
 import org.junit.Test;
 
@@ -9,5 +9,8 @@ import org.junit.Test;
  */
 public class UniversalResortTest {
     @Test
-    public void Test(){}
+    public void Test(){
+        UniversalResort u=UniversalResort.getInstance();
+        System.out.println(u);
+    }
 }
