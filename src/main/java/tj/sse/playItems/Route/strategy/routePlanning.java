@@ -2,6 +2,9 @@ package tj.sse.playItems.Route.strategy;
 /**
  *
  */
+import tj.sse.playItems.visitor.StampJurassicFlyersCoaster;
+import tj.sse.playItems.visitor.StampDecepticoaster;
+
 public abstract class routePlanning {
     //
     public abstract String[] provideSuggestions();
