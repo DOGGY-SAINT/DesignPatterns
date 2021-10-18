@@ -1,7 +1,7 @@
 package tj.sse.playItems.Decorator;
 
 import tj.sse.playItems.visitor.StampDisplayVisitor;
-import tj.sse.playItems.visitor.StampPotion;
+import tj.sse.playItems.visitor.StampRobot;
 
 public class RobotGame {
 
@@ -34,9 +34,9 @@ public class RobotGame {
         this.end();
     }
     private void end(){
-        StampPotion sp = new StampPotion();
+        StampRobot rb = new StampRobot();
         StampDisplayVisitor sdv=new StampDisplayVisitor();
-        sdv.visit(sp);
+        sdv.visit(rb);
     }
 
 }
