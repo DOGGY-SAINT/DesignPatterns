@@ -36,6 +36,9 @@ public class InfoRecovery {
             else if(Objects.equals(cmd,"#exit")){
                 break;
             }
+            else{
+                System.out.println("请输入有效的指令");
+            }
         }
     }
 }
