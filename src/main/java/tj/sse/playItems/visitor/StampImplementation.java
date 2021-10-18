@@ -16,7 +16,8 @@ public class StampImplementation implements Stamp{
  * @return
  **/
     public StampImplementation(){
-        parts=new Stamp[]{new StampPotion(),new StampWand(),new StampQuidditch()};
+        parts=new Stamp[]{new StampPotion(),new StampWand(),new StampQuidditch(),new StampJurassicFlyersCoaster(),
+                new StampDecepticoaster(),new StampRobot()};
     }
 
     /*

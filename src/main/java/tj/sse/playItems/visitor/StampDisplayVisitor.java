@@ -16,17 +16,32 @@ public class StampDisplayVisitor implements StampVisitor {
 
     @Override
     public void visit(StampPotion stampPotion){
-        System.out.println("魔药课盖章成功");
+        System.out.println("Potion class sealed");
     }
 
     @Override
     public void visit(StampQuidditch stampQuidditch){
-        System.out.println("魁地奇盖章成功");
+        System.out.println("QuidditchGame sealed");
     }
 
     @Override
     public void visit(StampWand stampWand){
-        System.out.println("魔杖体验盖章成功");
+        System.out.println("WandGame sealed");
+    }
+
+    @Override
+    public void visit(StampDecepticoaster stampDecepticoaster){
+        System.out.println("DecepticoasterGame sealed");
+    }
+
+    @Override
+    public void visit(StampJurassicFlyersCoaster stampJurassicFlyersCoaster){
+        System.out.println("JurassicFlyersCoaster sealed");
+    }
+
+    @Override
+    public void visit(StampRobot stampRobot){
+        System.out.println("StampRobot sealed");
     }
 
 }
