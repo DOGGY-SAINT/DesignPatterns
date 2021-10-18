@@ -10,7 +10,10 @@ import org.junit.Test;
 public class UniversalResortTest {
     @Test
     public void Test(){
-        UniversalResort u=UniversalResort.getInstance();
-        System.out.println(u);
+        System.out.println("---------------- [Test] UniversalResort ----------------");
+        UniversalResort u1=UniversalResort.getInstance(),u2=UniversalResort.getInstance();
+        System.out.println("u1: "+u1);
+        System.out.println("u2: "+u1);
+        System.out.println("------------------------- [End] -------------------------");
     }
 }

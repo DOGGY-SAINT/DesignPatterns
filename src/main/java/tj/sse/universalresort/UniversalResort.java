@@ -3,7 +3,7 @@ package tj.sse.universalresort;
 /**
  * @author DOGGY_LEE
  * @date 2021/10/15 12:52
- * @description 环球影城单例类
+ * @description 环球影城单例类,单例模式
  */
 public class UniversalResort {
     /**
