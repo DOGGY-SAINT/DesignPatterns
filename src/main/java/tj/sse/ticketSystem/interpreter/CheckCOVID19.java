@@ -1,4 +1,4 @@
-package tj.sse.TicketSystem.Interpreter;
+package tj.sse.ticketSystem.interpreter;
 import java.util.*;
 
 public class CheckCOVID19 {
@@ -7,7 +7,7 @@ public class CheckCOVID19 {
       <address> ::= Beijing | Los Angeles | Florida | Osaka | Singapore
       <name> ::= Universal Studios
     */
-    public static void main(String[] args) {
+    public static void infoRecovery() {
         Context condition = new Context();
         System.out.println("--------------");
         System.out.println("Universal Studios in Beijing：#1");

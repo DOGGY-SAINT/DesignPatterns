@@ -1,4 +1,4 @@
-package tj.sse.TicketSystem.proxy;
+package tj.sse.ticketSystem.proxy;
 import java.awt.*;
 import javax.swing.*;
 

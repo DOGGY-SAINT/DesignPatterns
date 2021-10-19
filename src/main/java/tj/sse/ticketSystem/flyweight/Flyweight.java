@@ -1,4 +1,4 @@
-package tj.sse.TicketSystem.Flyweight;
+package tj.sse.ticketSystem.flyweight;
 import java.util.HashMap;
 
 /**
