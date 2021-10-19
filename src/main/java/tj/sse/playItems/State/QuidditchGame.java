@@ -7,7 +7,7 @@ import tj.sse.playItems.visitor.StampQuidditch;
 
 public class QuidditchGame {
     public void book(){
-        System.out.println("——————————————恭喜你预约成功“魁地奇”游乐项目——————————————\n");
+        System.out.println("——————————————Congratulations! you have successfully booked the\"Quidditch\"——————————————\n");
     };
 
     public void play(){

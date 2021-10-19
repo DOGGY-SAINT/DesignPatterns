@@ -6,7 +6,7 @@ import java.util.*;
 
 public class PotionsClass {
     public void book(){
-        System.out.println("——————————————恭喜你预约成功“魔药课体验”游乐项目——————————————\n");
+        System.out.println("——————————————Congratulations! you have successfully booked the \"potions lesson\"——————————————\n");
     };
     public void play(){
         BellEventSource bell = new BellEventSource();    //铃（事件源）
