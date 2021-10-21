@@ -2,6 +2,7 @@ package tj.sse.exampletest;
 
 
 import org.junit.jupiter.api.Test;
+import tj.sse.App;
 import tj.sse.AppTest;
 
 import java.util.Scanner;
@@ -20,10 +21,9 @@ public class ExampleTest {
     public void exampleTest(){
         System.out.println("---------------- [Example Test] --------------");
         if(AppTest.input){
-            System.out.println("请输入:");
-            Scanner input=new Scanner(System.in);
-            String str=input.next();
-            System.out.println("你输入了"+str);
+            System.out.println("Input:");
+            String str= AppTest.scanner.next();
+            System.out.println("You input:"+str);
         }
         else{
             assertTrue(true);

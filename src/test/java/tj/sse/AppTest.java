@@ -20,7 +20,9 @@ import static org.junit.platform.engine.discovery.ClassNameFilter.includeClassNa
  */
 public class AppTest {
     public static boolean input=false;
+    public static Scanner scanner;
     public static void main(String[] args) {
+        scanner=new Scanner(System.in);
         LauncherDiscoveryRequestBuilder requestBuilder = LauncherDiscoveryRequestBuilder.request()
                 .selectors(selectPackage(AppTest.class.getPackageName()))
                 .filters(includeClassNamePatterns(".*Test"));
@@ -32,29 +34,28 @@ public class AppTest {
         for (int i = 0; i < testIdentifierArray.length; ++i) {
             System.out.printf("%2d: %s\n", i, testIdentifierArray[i].getDisplayName());
         }
-        Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.print("Current mode:");
             if(input)
                 System.out.println("Not auto");
             else
                 System.out.println("Auto");
-            System.out.println("0-"+(testIdentifierArray.length-1)+" test,"+testIdentifierArray.length+" automatically test all,-1 change mode,-2 exit");
+            System.out.println("0-"+(testIdentifierArray.length-1)+" test,"+testIdentifierArray.length+" automatically test all,-1 change mode,-2 list,-3 exit");
             int choice = scanner.nextInt();
-            if (choice == -2) {
+            if (choice == -3) {
                 break;
             }
+            else if (choice == -2) {
+                for (int i = 0; i < testIdentifierArray.length; ++i) {
+                    System.out.printf("%2d: %s\n", i, testIdentifierArray[i].getDisplayName());
+                }
+            }
             else if (choice == -1) {
-                System.out.println("1 auto,0 not");
-                int t=scanner.nextInt();
-                if(t==0)
-                    input=true;
-                else if(t==1)
-                    input=false;
+                input=!input;
             }
             else if(0<=choice&&choice<testIdentifierArray.length){
                 TestIdentifier chosenTestIdentifier = testIdentifierArray[choice];
-                System.out.printf("正在执行测试%2d: %s\n", choice, chosenTestIdentifier.getDisplayName());
+                System.out.printf("Testing %2d: %s\n", choice, chosenTestIdentifier.getDisplayName());
                 LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request()
                         .selectors(selectPackage(AppTest.class.getPackageName()))
                         .filters(includeClassNamePatterns(chosenTestIdentifier.getLegacyReportingName()))
@@ -64,8 +65,9 @@ public class AppTest {
             else if(choice==testIdentifierArray.length){
                 boolean before=input;
                 input=false;
+                choice=0;
                 for(TestIdentifier chosenTestIdentifier:testIdentifierArray){
-                    System.out.printf("正在执行测试%2d: %s\n", choice, chosenTestIdentifier.getDisplayName());
+                    System.out.printf("Testing %2d: %s\n", choice++, chosenTestIdentifier.getDisplayName());
                     LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request()
                             .selectors(selectPackage(AppTest.class.getPackageName()))
                             .filters(includeClassNamePatterns(chosenTestIdentifier.getLegacyReportingName()))
@@ -75,8 +77,9 @@ public class AppTest {
                 input=before;
             }
             else
-                System.out.println("越界！");
+                System.out.println("Overflow！");
         }
-
+        scanner.close();
+        scanner=null;
     }
 }
