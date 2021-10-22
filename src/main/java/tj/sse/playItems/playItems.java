@@ -1,11 +1,11 @@
 package tj.sse.playItems;
 
-import tj.sse.playItems.Decorator.RobotGame;
-import tj.sse.playItems.Facade.Booking;
-import tj.sse.playItems.State.QuidditchGame;
-import tj.sse.playItems.Observer.PotionsClass;
-import tj.sse.playItems.ResChain.WandGame;
-import tj.sse.playItems.Template.templatemethod;
+import tj.sse.playItems.decorator.RobotGame;
+import tj.sse.playItems.facade.Booking;
+import tj.sse.playItems.state.QuidditchGame;
+import tj.sse.playItems.observer.PotionsClass;
+import tj.sse.playItems.resChain.WandGame;
+import tj.sse.playItems.template.templatemethod;
 public class playItems {
     public static void main(String[] args) {
          String path[]={
