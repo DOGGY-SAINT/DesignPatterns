@@ -1,6 +1,7 @@
 package tj.sse.universalresort;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import tj.sse.AppTest;
 
 /**
  * @author DOGGY_LEE
@@ -12,8 +13,24 @@ public class UniversalResortTest {
     public void Test(){
         System.out.println("---------------- [Test] UniversalResort ----------------");
         UniversalResort u1=UniversalResort.getInstance(),u2=UniversalResort.getInstance();
-        System.out.println("u1: "+u1);
-        System.out.println("u2: "+u1);
+        if(AppTest.input){
+            while(true){
+                System.out.println("u1: "+u1);
+                System.out.println("u2: "+u2);
+                System.out.println("0 exit, 1 refresh u1, 2 refresh u2");
+                String str=AppTest.scanner.next();
+                if(str.equals("0"))
+                    break;
+                else if(str.equals("1"))
+                    u1=UniversalResort.getInstance();
+                else if(str.equals("2"))
+                    u2=UniversalResort.getInstance();
+            }
+        }
+        else{
+            System.out.println("u1: "+u1);
+            System.out.println("u2: "+u2);
+        }
         System.out.println("------------------------- [End] -------------------------");
     }
 }
