@@ -1,5 +1,7 @@
 package tj.sse.snackshop.drinks;
 
+import tj.sse.utils.MyLogger;
+
 /**
  * @author DOGGY_LEE
  * @date 2021/10/16 18:50
@@ -19,6 +21,7 @@ public class DrinksSeller {
      * @return tj.sse.snackshop.drinks.Drinks
      * */
     public Drinks getDrinks(String name){
+        MyLogger.logger.info("get");
         if(name.equals("Cola"))
             return shelves[0].getDrinks();
         else if(name.equals("Fanta"))

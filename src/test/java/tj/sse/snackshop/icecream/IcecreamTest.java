@@ -1,6 +1,6 @@
 package tj.sse.snackshop.icecream;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * @Classname IcecreamTest

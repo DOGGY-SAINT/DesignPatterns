@@ -1,8 +1,6 @@
 package tj.sse.snackshop.milktea;
 
-import org.junit.Test;
-
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author DOGGY_LEE

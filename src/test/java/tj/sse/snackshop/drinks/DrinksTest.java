@@ -1,8 +1,6 @@
 package tj.sse.snackshop.drinks;
 
-import org.junit.Test;
-import tj.sse.snackshop.milktea.MilkTea;
-import tj.sse.snackshop.milktea.MilkTeaMachine;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author DOGGY_LEE
