@@ -2,13 +2,16 @@ package tj.sse.restaurant;
 
 
 import java.util.Scanner;
+
+import tj.sse.AppTest;
 import tj.sse.restaurant.menucomponent.*;
 import tj.sse.restaurant.cookingcommand.*;
 
-import static org.junit.Assert.assertTrue;
 
 public class RestaurantTest {
     public static void main(String[] args) {
+        System.out.println("------------------[Restaurant Test]---------------------");
+
         Menu menu = new Menu("Harry Potter restaurant menu");
         Menu menu1 = new Menu("ChickenRib Platter: 200.0");
         Menu menu2 = new Menu("Rib Platter:\t100.0");
@@ -29,7 +32,6 @@ public class RestaurantTest {
         menu3.add(new MenuItem("French Fries", 30.0));
         menu3.add(new MenuItem("Cola         ", 20.0));
 
-
         //给第一个菜单添加两个子菜单
         menu1.add(menu2);
         menu1.add(menu3);
@@ -37,35 +39,43 @@ public class RestaurantTest {
         //打印所有菜单
         menu.print(0);
 
-        System.out.println("\n【Order now？（Y/N）】");
-        Scanner scanner = new Scanner(System.in);
-        while (true){
-            String choice;
-            choice = scanner.next();
-            switch (choice){
-                case"Y":
-                    Food food1 = new Chicken();
-                    Food food2 = new Rib();
-                    Food food3 = new FrenchFries();
-                    Food food4 = new Cola();
-                    Food food5 = new ChickenPlatter();
-                    Food food6 = new RibPlatter();
-                    Food food7 = new ChickenRibPlatter();
-                    Waiter waiter = new Waiter();      //new一个服务员
-                    //设置单品
-                    waiter.setChicken(food1);          //设置烤鸡
-                    waiter.setRib(food2);              //设置排骨
-                    waiter.setFrenchfries(food3);      //设置薯条
-                    waiter.setCola(food4);             //设置可乐
-                    //点菜
-                    waiter.order();
-                case"N":
-                    System.out.println("Thanks for using！");
-                    System.exit(1);
-                default:
-                    System.out.println("Please enter Y/N:");
-                    break;
+        //实例化点菜模板
+        Food food1 = new Chicken();
+        Food food2 = new Rib();
+        Food food3 = new FrenchFries();
+        Food food4 = new Cola();
+        Food food5 = new ChickenPlatter();
+        Food food6 = new RibPlatter();
+        Food food7 = new ChickenRibPlatter();
+        Waiter waiter = new Waiter();      //new一个服务员
+        //设置单品
+        waiter.setChicken(food1);          //设置烤鸡
+        waiter.setRib(food2);              //设置排骨
+        waiter.setFrenchfries(food3);      //设置薯条
+        waiter.setCola(food4);             //设置可乐
+
+        if(AppTest.input){
+            System.out.println("\n【Order now？（Y/N）】");
+            while (true){
+                String choice;
+                choice = AppTest.scanner.next();
+                switch (choice){
+                    case"Y":
+                        waiter.order();
+                    case"N":
+                        System.out.println("Thanks for using！");
+                        System.exit(1);
+                    default:
+                        System.out.println("Please enter Y/N:");
+                        break;
+                }
             }
+        }else{
+            System.out.println("\n【Order now？（Y/N）】");
+            System.out.println("\nY");
+            waiter.order();
         }
+
     }
+
 }
