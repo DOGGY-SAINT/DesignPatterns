@@ -70,6 +70,6 @@ public class MilkTeaTest {
             mt=machine.getMilkTea("Cold;LittleSuger;Pearl");
             System.out.println(mt.getInf());
         }
-        System.out.println("--------------------- [End] -------------- ----");
+        System.out.println("--------------------- [End] ------------------");
     }
 }

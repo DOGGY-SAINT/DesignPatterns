@@ -32,5 +32,6 @@ public class DrinksTest {
             mt=seller.getDrinks("Fanta");;
             System.out.println(mt.getInf());
         }
+        System.out.println("------------------- [End] -------------------");
     }
 }

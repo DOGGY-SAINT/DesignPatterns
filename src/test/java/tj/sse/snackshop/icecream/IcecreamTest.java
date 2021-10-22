@@ -17,7 +17,7 @@ public class IcecreamTest {
     public void IcecreamTest()
     {
 
-        System.out.println("------------ --- [Test] Icecream ----- --------");
+        System.out.println("--------------- [Test] Icecream -------------");
         if(AppTest.input){
             System.out.println("What flavor of ice cream do you want(blueberries, chocolate, or something else):");
             String str= AppTest.scanner.next();
@@ -30,6 +30,6 @@ public class IcecreamTest {
             System.out.println(im.getIcecream("Nothing"));
             System.out.println(im.getIcecream("Apple"));
         }
-        System.out.println("--------------------- [End] -------------- ----");
+        System.out.println("--------------------- [End] ------------------");
     }
 }

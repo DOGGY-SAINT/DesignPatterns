@@ -21,7 +21,6 @@ public class DrinksSeller {
      * @return tj.sse.snackshop.drinks.Drinks
      * */
     public Drinks getDrinks(String name){
-        MyLogger.logger.info("get");
         if(name.equals("Cola"))
             return shelves[0].getDrinks();
         else if(name.equals("Fanta"))
