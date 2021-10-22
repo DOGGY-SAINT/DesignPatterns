@@ -3,13 +3,15 @@ package tj.sse.restaurant;
 
 import java.util.Scanner;
 
+import org.junit.jupiter.api.Test;
 import tj.sse.AppTest;
 import tj.sse.restaurant.menucomponent.*;
 import tj.sse.restaurant.cookingcommand.*;
 
 
 public class RestaurantTest {
-    public static void main(String[] args) {
+    @Test
+    public void restaruanrTest(){
         System.out.println("------------------[Restaurant Test]---------------------");
 
         Menu menu = new Menu("Harry Potter restaurant menu");
@@ -71,11 +73,8 @@ public class RestaurantTest {
                 }
             }
         }else{
-            System.out.println("\n【Order now？（Y/N）】");
-            System.out.println("\nY");
-            waiter.order();
+            waiter.order2();
         }
 
     }
-
 }

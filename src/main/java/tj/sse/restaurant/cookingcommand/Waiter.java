@@ -108,7 +108,35 @@ public class Waiter {
                     break;
             }
         }
-
-
     }
+
+    public void order2() {
+        System.out.println("【   name\t\t   price（RMB）】");
+
+        System.out.print("1. Chicken：\t\t100RMB\n" +
+                "2. Rib：\t\t\t80RMB\n" +
+                "3. French Fries：\t30RMB\n" +
+                "4. Cola：\t\t\t20RMB\n" +
+                "5. Chicken Platter：120RMB\n" +
+                "6. Rib Platter：\t100RMB\n" +
+                "7. ChickenRib Platter 200RMB\n" +
+                "0. over\n");
+
+            System.out.println("\n【Choose what you want to eat：（Enter 0~7 and hit enter）】");
+
+            System.out.println("\n1");
+            this.chooseChicken();
+
+            System.out.println("\n4");
+            this.chooseRib();
+
+            System.out.println("\n6");
+            this.chooseFrenchFries();
+
+            System.out.println("\n7");
+            this.chooseRibPlatter();
+
+            System.out.println("The order is complete, please wait for the food！");
+
+            }
 }
