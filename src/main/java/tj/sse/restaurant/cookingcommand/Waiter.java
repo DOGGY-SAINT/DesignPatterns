@@ -62,19 +62,19 @@ public class Waiter {
     }
 
     public void order() {
-        System.out.println("【餐品名称\t\t价格（RMB）】");
+        System.out.println("【   name\t\t   price（RMB）】");
 
-        System.out.print("1. 烤鸡：\t\t100\n" +
-                "2. 排骨：\t\t80RMB\n" +
-                "3. 薯条：\t\t30RMB\n" +
-                "4. 可乐：\t\t20RMB\n" +
-                "5. 烤鸡拼盘：\t\t120RMB\n" +
-                "6. 排骨拼盘：\t\t100RMB\n" +
-                "7. 烤鸡排骨拼盘\t200RMB\n" +
-                "0. 结束点餐\n");
+        System.out.print("1. chicken：\t\t100RMB\n" +
+                "2. rib：\t\t\t80RMB\n" +
+                "3. french fries：\t30RMB\n" +
+                "4. cola：\t\t\t20RMB\n" +
+                "5. Chicken Platter：120RMB\n" +
+                "6. Rib Platter：\t100RMB\n" +
+                "7. ChickenRib Platter 200RMB\n" +
+                "0. over\n");
 
         while (true) {
-            System.out.println("\n【请选择您需要的单品/拼盘：（输入1个序号后点击回车）】");
+            System.out.println("\n【Choose what you want to eat：（Enter 0~7 and hit enter）】");
             Scanner scanner = new Scanner(System.in);
             String choice;
             choice = scanner.next();
@@ -101,10 +101,10 @@ public class Waiter {
                     this.chooseChickenRibPlatter();
                     break;
                 case "0":
-                    System.out.println("点餐完成，请等待美食吧！");
+                    System.out.println("The order is complete, please wait for the food！");
                     System.exit(1);
                 default:
-                    System.out.println("请输入0-7中的某个数字");
+                    System.out.println("Please enter a number from 0-7");
                     break;
             }
         }

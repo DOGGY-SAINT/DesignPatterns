@@ -31,6 +31,6 @@ public class MenuItem extends MenuComponent {
 
     @Override
     public void print(int level) {
-        System.out.println("=\t" + getName() + ":\t" + getPrice() + "\t=");
+        System.out.println(getName() + "\t" + getPrice());
     }
 }

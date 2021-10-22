@@ -35,22 +35,22 @@ public class Menu extends MenuComponent {
     @Override
     public void print(int level) {
         if (level == 0) {
-            System.out.println("\n++++++++++++++++++++++");
-            System.out.println("+++" + getName() + "+++");
-            System.out.println("++++++++++++++++++++++\n");
+            System.out.println("\n++++++++++++++++++++++++++++++++++++++");
+            System.out.println("   " + getName() + "   ");
+            System.out.println("++++++++++++++++++++++++++++++++++++++\n");
         } else if (level == 1) {
             System.out.println("【" + getName() + "】");
         } else {
-            System.out.println("\t" + getName() + "");
+            System.out.println(getName() + "--------");
         }
         //打印所有子菜单
         for (MenuComponent menu : menuList) {
             if (level == 0) {
-                System.out.println("======================");
+                System.out.println("=============================");
             }
             menu.print(++level);
             if (level == 0) {
-                System.out.println("======================\n");
+                System.out.println("=============================\n");
             }
             level--;
         }
