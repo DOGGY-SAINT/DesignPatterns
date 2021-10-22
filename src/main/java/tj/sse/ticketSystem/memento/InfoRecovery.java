@@ -1,7 +1,6 @@
 package tj.sse.ticketSystem.memento;
 import java.util.Objects;
 import java.util.Scanner;
-import tj.sse.ticketSystem.interpreter.CheckCOVID19;
 
 public class InfoRecovery {
     public static void main(String[] args) {
@@ -41,6 +40,5 @@ public class InfoRecovery {
                 System.out.println("please enter a valid");
             }
         }
-        CheckCOVID19.infoRecovery();
     }
 }

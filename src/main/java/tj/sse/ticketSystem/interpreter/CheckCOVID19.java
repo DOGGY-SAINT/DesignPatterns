@@ -7,7 +7,7 @@ public class CheckCOVID19 {
       <address> ::= Beijing | Los Angeles | Florida | Osaka | Singapore
       <name> ::= Universal Studios
     */
-    public static void infoRecovery() {
+    public static void main() {
         Context condition = new Context();
         System.out.println("--------------");
         System.out.println("Universal Studios in Beijing：#1");
