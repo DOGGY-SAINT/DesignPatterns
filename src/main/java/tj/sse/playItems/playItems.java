@@ -4,12 +4,16 @@ import tj.sse.playItems.Facade.Booking;
 import tj.sse.playItems.State.QuidditchGame;
 import tj.sse.playItems.Observer.PotionsClass;
 import tj.sse.playItems.ResChain.WandGame;
+import tj.sse.playItems.Template.templatemethod;
 public class playItems {
     public static void main(String[] args) {
          String path[]={
              "QuidditchGame",
              "WandGame",
-             "PotionClass"
+             "PotionClass",
+                 "JurassicFlyerscoaster",
+                 "DeceptiCoaster"
+
          };
         Booking book = new Booking();
         for(int i = 0; i < path.length; i++){
@@ -24,6 +28,12 @@ public class playItems {
         System.out.println("-----PotionClass------");
         PotionsClass potionClass = new PotionsClass();
         potionClass.play();
+
+        System.out.println("-----DeceptiCoaster----");
+        templatemethod coaster = new templatemethod();
+        coaster.playDecepticoaster();
+        System.out.println("-----JurassicFlyerscoaster------");
+        coaster.playJurassicFlyersCoaster();
 
     }
 }

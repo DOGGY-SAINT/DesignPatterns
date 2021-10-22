@@ -18,7 +18,7 @@ public class templatemethod {
     public void DecepticoasterBook(){
         System.out.println("——————————————Book Decepticoaster successfully!——————————————\n");
     }
-    public void playJurassicFlyersCoasterBook(){
+    public void JurassicFlyersCoasterBook(){
         System.out.println("——————————————Book playJurassicFlyersCoaster successfully!——————————————\n");
     }
     public void playDecepticoaster() {
