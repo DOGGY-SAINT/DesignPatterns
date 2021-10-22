@@ -9,8 +9,8 @@ public class CheckCOVID19Test {
     @Test
     public void checkCOVID19Test(){
         System.out.println("--------------- [Test] CheckCOVID19 ---------------");
+        Context condition = new Context();
         if(AppTest.input){
-            Context condition = new Context();
             while(true){
                 System.out.println("Universal Studios in Beijing：#1");
                 System.out.println("Universal Studios in Los Angeles：#2");
@@ -46,7 +46,6 @@ public class CheckCOVID19Test {
             }
         }
         else{
-            Context condition = new Context();
             condition.freeRide("Universal Studios in Beijing");
             condition.freeRide("Universal Studios in Los Angeles");
             condition.freeRide("Universal Studios in Florida");
