@@ -3,7 +3,7 @@ package tj.sse.playItems.Route.strategy;
 /**
  * 策略A
  */
-class strategyA extends routePlanning {
+public class strategyA extends routePlanning {
 
     @Override
     public String[] provideSuggestions() {

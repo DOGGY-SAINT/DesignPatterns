@@ -1,7 +1,12 @@
 package tj.sse.playItems.Route.iterator;
 
-import tj.sse.playItems.Route.iterator.Route;
-import tj.sse.playItems.Route.iterator.Spots;
+import tj.sse.playItems.Route.strategy.routePlanning;
+import tj.sse.playItems.Route.strategy.strategyA;
+//import tj.sse.playItems.Route.strategy.;
+import tj.sse.playItems.State.QuidditchGame;
+import tj.sse.playItems.Observer.PotionsClass;
+import tj.sse.playItems.ResChain.WandGame;
+import tj.sse.playItems.Template.templatemethod;
 
 /**
  * @ClassNameSpotsName
@@ -12,7 +17,9 @@ import tj.sse.playItems.Route.iterator.Spots;
  **/
 
 public class SpotsName implements Spots {
-    public String[] names = {};
+    strategyA route=new strategyA();
+
+    public String[] names =route.provideSuggestions();
 
     @Override
     public tj.sse.playItems.Route.iterator.Route getRoute() {
@@ -21,7 +28,6 @@ public class SpotsName implements Spots {
 
     private class SpotsRoute implements Route {
         int index;
-
         @Override
         public boolean hasNext(){
             if(index< names.length)

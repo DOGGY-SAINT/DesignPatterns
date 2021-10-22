@@ -4,6 +4,7 @@ import tj.sse.playItems.Facade.Booking;
 import tj.sse.playItems.State.QuidditchGame;
 import tj.sse.playItems.Observer.PotionsClass;
 import tj.sse.playItems.ResChain.WandGame;
+import tj.sse.playItems.Route.iterator.SpotsName;
 public class playItems {
     public static void main(String[] args) {
          String path[]={
@@ -24,6 +25,7 @@ public class playItems {
         System.out.println("-----PotionClass------");
         PotionsClass potionClass = new PotionsClass();
         potionClass.play();
-
+        SpotsName ite=new SpotsName();
+        ite.
     }
 }
