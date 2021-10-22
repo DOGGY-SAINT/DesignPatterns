@@ -1,4 +1,4 @@
-package tj.sse.Souvenir.Mediator;
+package tj.sse.Souvenir.mediator;
 
 //抽象中介者：中介平台
 interface Medium {

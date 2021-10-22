@@ -1,14 +1,7 @@
 //Author: Yang Jing
 //Date：2021.10.18
 
-package tj.sse.Souvenir.Mediator;
-
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
+package tj.sse.Souvenir.mediator;
 
 public class Platform {
     public void start(){

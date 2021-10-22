@@ -1,4 +1,4 @@
-package tj.sse.Souvenir.Mediator;
+package tj.sse.Souvenir.mediator;
 
 import java.util.ArrayList;
 import java.util.List;

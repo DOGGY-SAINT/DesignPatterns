@@ -1,4 +1,4 @@
-package tj.sse.Souvenir.Mediator;
+package tj.sse.Souvenir.mediator;
 
 import javax.swing.*;
 import java.awt.*;

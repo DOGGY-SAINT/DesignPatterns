@@ -1,13 +1,14 @@
-package tj.sse;
+package tj.sse.souvenir;
 
-import tj.sse.Souvenir.Mediator.Platform;
+import org.junit.jupiter.api.Test;
+import tj.sse.Souvenir.mediator.Platform;
 
 /**
  * 周边售卖平台的测试
  */
 public class PlayformTest {
-    public static void main( String[] args )
-    {
+    @Test
+    public void test(){
         Platform HarryPotter = new Platform();
         HarryPotter.start();
         HarryPotter.chat();

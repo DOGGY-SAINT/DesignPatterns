@@ -1,16 +1,16 @@
-package tj.sse.Souvenir.Mediator;
+package tj.sse.Souvenir.mediator;
 
-//具体同事类：买方
-class Buyer extends Customer {
-    private static final long serialVersionUID = -474879276076308825L;
+//具体同事类：店主客服
+class Seller extends Customer {
+    private static final long serialVersionUID = -1443076716629516027L;
 
-    public Buyer(String name) {
+    public Seller(String name) {
         super(name);
-        ClientWindow(1350, 200);
+        ClientWindow(800, 200);
     }
 
     public void send(String ad) {
-        ReceiveArea.append("I (buyer) say: " + ad + "\n");
+        ReceiveArea.append("I (salesman) say: " + ad + "\n");
         //使滚动条滚动到最底端
         ReceiveArea.setCaretPosition(ReceiveArea.getText().length());
         medium.relay(name, ad);
@@ -22,3 +22,4 @@ class Buyer extends Customer {
         ReceiveArea.setCaretPosition(ReceiveArea.getText().length());
     }
 }
+
