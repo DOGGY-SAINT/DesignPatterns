@@ -1,5 +1,6 @@
 package tj.sse.playItems;
 
+import tj.sse.playItems.Decorator.RobotGame;
 import tj.sse.playItems.Facade.Booking;
 import tj.sse.playItems.State.QuidditchGame;
 import tj.sse.playItems.Observer.PotionsClass;
@@ -11,8 +12,9 @@ public class playItems {
              "QuidditchGame",
              "WandGame",
              "PotionClass",
-                 "JurassicFlyerscoaster",
-                 "DeceptiCoaster"
+             "JurassicFlyerscoaster",
+             "DeceptiCoaster",
+             "RobotGame"
 
          };
         Booking book = new Booking();
@@ -34,6 +36,11 @@ public class playItems {
         coaster.playDecepticoaster();
         System.out.println("-----JurassicFlyerscoaster------");
         coaster.playJurassicFlyersCoaster();
+
+
+        System.out.println("-----Robot Game------");
+        RobotGame robotGame = new RobotGame();
+        robotGame.play();
 
     }
 }

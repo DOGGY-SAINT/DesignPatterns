@@ -6,7 +6,7 @@ import tj.sse.playItems.visitor.StampRobot;
 public class RobotGame {
 
     public void book(){
-        System.out.println("——————————————恭喜你预约成功“机器人工厂”游乐项目——————————————\n");
+        System.out.println("——————————————Congratulations on booking Robot Game successfully!——————————————\n");
     }
 
     public void play(){

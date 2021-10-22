@@ -4,12 +4,13 @@ import tj.sse.playItems.State.QuidditchGame;
 import tj.sse.playItems.ResChain.WandGame;
 import tj.sse.playItems.Observer.PotionsClass;
 import tj.sse.playItems.Template.templatemethod;
-
+import tj.sse.playItems.Decorator.RobotGame;
 public class Booking {
     private WandGame wandGame = new WandGame();
     private QuidditchGame quidditch = new QuidditchGame();
     private PotionsClass potionClass = new PotionsClass();
     private templatemethod coaster = new templatemethod();
+    private RobotGame robotGame = new RobotGame();
 
     public boolean book(String name){
         switch(name) {
@@ -28,7 +29,9 @@ public class Booking {
             case "JurassicFlyerscoaster":
                 coaster.JurassicFlyersCoasterBook();
                 return true;
-
+            case "RobotGame":
+                robotGame.book();
+                return true;
 
         }
         return false;
