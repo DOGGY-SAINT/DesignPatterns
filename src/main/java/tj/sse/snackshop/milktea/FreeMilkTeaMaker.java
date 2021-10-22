@@ -36,7 +36,7 @@ public class FreeMilkTeaMaker implements MilkTeaMaker{
     }
 
     public MilkTea makeMilkTea(String request){
-        String[] requests=request.split(" ");
+        String[] requests=request.split(";");
         setIce(requests[0]);
         setSweatness(requests[1]);
         setItem(requests[2]);

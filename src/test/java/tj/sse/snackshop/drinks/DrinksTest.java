@@ -1,6 +1,10 @@
 package tj.sse.snackshop.drinks;
 
 import org.junit.jupiter.api.Test;
+import tj.sse.AppTest;
+import tj.sse.snackshop.icecream.IcecreamMachine;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @author DOGGY_LEE
@@ -12,12 +16,21 @@ public class DrinksTest {
     public void drinksTest()
     {
         System.out.println("---------------- [Test] Drinks ----------------");
-        DrinksSeller seller=new DrinksSeller();
-        Drinks mt;
-        mt=seller.getDrinks("Cola");
-        System.out.println(mt.getInf());
-        mt=mt=seller.getDrinks("Fanta");;
-        System.out.println(mt.getInf());
-        System.out.println("-------------------- [End] --------------------");
+        if(AppTest.input){
+            System.out.println("Do you want Fanta or Coke?:");
+            String str= AppTest.scanner.next();
+            DrinksSeller seller=new DrinksSeller();
+            Drinks mt;
+            mt=seller.getDrinks(str);
+            System.out.println(mt.getInf());
+        }
+        else{
+            DrinksSeller seller=new DrinksSeller();
+            Drinks mt;
+            mt=seller.getDrinks("Cola");
+            System.out.println(mt.getInf());
+            mt=seller.getDrinks("Fanta");;
+            System.out.println(mt.getInf());
+        }
     }
 }
