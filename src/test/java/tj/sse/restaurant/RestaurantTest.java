@@ -61,20 +61,18 @@ public class RestaurantTest {
             while (true){
                 String choice;
                 choice = AppTest.scanner.next();
-                switch (choice){
-                    case"Y":
-                        waiter.order();
-                    case"N":
-                        System.out.println("Thanks for using！");
-                        System.exit(1);
-                    default:
-                        System.out.println("Please enter Y/N:");
-                        break;
+                if(choice.equals("N"))
+                    break;
+                else if(choice.equals("Y")){
+                    waiter.order();
+                    break;
                 }
+                else
+                    System.out.println("Please enter Y/N:");
             }
         }else{
             waiter.order2();
         }
-
+        System.out.println("-----------------------[End]--------------------------");
     }
 }

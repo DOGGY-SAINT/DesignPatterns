@@ -102,7 +102,7 @@ public class Waiter {
                     break;
                 case "0":
                     System.out.println("The order is complete, please wait for the food！");
-                    System.exit(1);
+                    return;
                 default:
                     System.out.println("Please enter a number from 0-7");
                     break;
