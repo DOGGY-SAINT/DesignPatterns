@@ -10,7 +10,7 @@ package tj.sse.ticketSystem.flyweight;
 class Client {
 
     public static void main(String[] args) {
-        int extrinsic = 22;
+        int extrinsic = 0;
 
         tj.sse.ticketSystem.flyweight.Flyweight flyweightX = tj.sse.ticketSystem.flyweight.FlyweightFactory.getFlyweight("Adult ticket");
         flyweightX.operate(++extrinsic);
