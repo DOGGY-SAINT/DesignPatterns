@@ -1,6 +1,5 @@
 package tj.sse.exampletest;
 
-
 import org.junit.jupiter.api.Test;
 import tj.sse.AppTest;
 
