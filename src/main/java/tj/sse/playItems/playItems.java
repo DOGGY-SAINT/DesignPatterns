@@ -1,7 +1,7 @@
 package tj.sse.playItems;
 
-import tj.sse.playItems.Route.iterator.Route;
-import tj.sse.playItems.Route.iterator.SpotsName;
+import tj.sse.playItems.route.iterator.Route;
+import tj.sse.playItems.route.iterator.SpotsName;
 import tj.sse.playItems.Route.strategy.strategyA;
 import tj.sse.playItems.decorator.RobotGame;
 import tj.sse.playItems.facade.Booking;
@@ -14,14 +14,7 @@ public class playItems {
     public static void main(String[] args) {
         strategyA Route=new strategyA();
         String[] path = Route.provideSuggestions();
-//         String path[]={
-//             "QuidditchGame",
-//             "WandGame",
-//             "PotionClass",
-//             "JurassicFlyerscoaster",
-//             "DeceptiCoaster",
-//             "RobotGame"
-//         };
+
         Booking book = new Booking();
         for(int i = 0; i < path.length; i++){
             book.book(path[i]);
@@ -29,7 +22,7 @@ public class playItems {
         SpotsName spotsName=new SpotsName();
 
         System.out.println("THE GAME SEQUENCE:");
-        for(Route route=spotsName.getRoute();route.hasNext();){
+        for(Route route = spotsName.getRoute(); route.hasNext();){
             String name=(String)route.next();
             System.out.println("Game Name:"+name);
         }

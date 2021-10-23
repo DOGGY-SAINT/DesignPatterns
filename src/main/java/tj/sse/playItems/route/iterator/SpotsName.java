@@ -1,4 +1,4 @@
-package tj.sse.playItems.Route.iterator;
+package tj.sse.playItems.route.iterator;
 
 import tj.sse.playItems.Route.strategy.strategyA;
 
