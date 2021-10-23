@@ -8,6 +8,6 @@ package tj.sse.snackshop.drinks;
 public class Fanta implements Drinks{
     @Override
     public String getInf() {
-        return "Fanta";
+        return "This is a Fanta";
     }
 }

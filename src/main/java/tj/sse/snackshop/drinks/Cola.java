@@ -8,6 +8,6 @@ package tj.sse.snackshop.drinks;
 public class Cola implements Drinks{
     @Override
     public String getInf() {
-        return "Cola";
+        return "This is a Cola";
     }
 }

@@ -22,7 +22,10 @@ public class DrinksTest {
             DrinksSeller seller=new DrinksSeller();
             Drinks mt;
             mt=seller.getDrinks(str);
-            System.out.println(mt.getInf());
+            if(mt==null)
+                System.out.println("Drinks not exist");
+            else
+                System.out.println(mt.getInf());
         }
         else{
             DrinksSeller seller=new DrinksSeller();
