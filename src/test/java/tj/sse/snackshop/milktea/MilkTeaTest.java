@@ -43,7 +43,10 @@ public class MilkTeaTest {
                 System.out.println("Please enter your milk tea type according to the above format:");
                 String str=AppTest.scanner.next();
                 mt=machine.getMilkTea(str);
-                System.out.println("Your MilkTea:"+mt.getInf());
+                if(mt==null)
+                    System.out.println("Wrong input");
+                else
+                    System.out.println("Your MilkTea:"+mt.getInf());
             }
             else if(i==4){
                 System.out.println("Send you a cup of milk tea, maybe you will become addicted!");

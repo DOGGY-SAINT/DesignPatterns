@@ -17,6 +17,8 @@ public class FreeMilkTeaMaker implements MilkTeaMaker{
             milkTea=new HotMilkTea();
         else if(Ice.equals("Cold"))
             milkTea=new ColdMilkTea();
+        else
+            milkTea=null;
     }
 
     @Override
@@ -37,9 +39,12 @@ public class FreeMilkTeaMaker implements MilkTeaMaker{
 
     public MilkTea makeMilkTea(String request){
         String[] requests=request.split(";");
-        setIce(requests[0]);
-        setSweatness(requests[1]);
-        setItem(requests[2]);
-        return milkTea;
+        if (requests.length==3){
+            setIce(requests[0]);
+            setSweatness(requests[1]);
+            setItem(requests[2]);
+            return milkTea;
+        }
+        return null;
     }
 }

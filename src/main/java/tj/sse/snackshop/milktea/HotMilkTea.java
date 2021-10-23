@@ -7,7 +7,7 @@ package tj.sse.snackshop.milktea;
  * @Date 2021-10-10 13:31
  * @Version 1.0
  **/
-public class HotMilkTea extends MilkTea {
+ public class HotMilkTea extends MilkTea {
     @Override
     public String getInf() {
         return "Hot Milk Tea + "+sweetness.getSweetness()+" + "+item.getItem();
