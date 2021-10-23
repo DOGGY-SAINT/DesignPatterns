@@ -20,6 +20,6 @@ public class Tongcheng implements Ticket {
     }
 
     public void postRequest() {
-        System.out.println("Tongcheng--环球影城门票购票结束。");
+        System.out.println("Tongcheng--UniversalStudio ticketSystem end...");
     }
 }
