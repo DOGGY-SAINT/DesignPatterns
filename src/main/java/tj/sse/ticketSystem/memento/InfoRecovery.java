@@ -4,11 +4,10 @@ import java.util.Scanner;
 
 public class InfoRecovery {
     public static void main(String[] args) {
-        System.out.println("--------------");
         System.out.println("input information：#input");
         System.out.println("change information：#change");
         System.out.println("roll back information：#rollback");
-        System.out.println("exit this pard：#exit");
+        System.out.println("exit this module：#exit");
         System.out.println("please input command：");
 
         Originator or = new Originator();
