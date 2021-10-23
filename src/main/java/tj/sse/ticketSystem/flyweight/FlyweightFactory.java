@@ -9,7 +9,7 @@ import java.util.HashMap;
  * @Date 2021/10/22 14:52
  * @Version 1.0
  **/
-class FlyweightFactory {
+public class FlyweightFactory {
 
     //定义一个池容器
     private static HashMap<String, Flyweight> pool = new HashMap<>();

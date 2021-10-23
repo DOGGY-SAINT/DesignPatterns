@@ -6,11 +6,11 @@ public class CheckCOVID19 {
     public static void checkCOVID19(){
         Context condition = new Context();
         while(true){
-            System.out.println("Universal Studios in Beijing：#1");
-            System.out.println("Universal Studios in Los Angeles：#2");
-            System.out.println("Universal Studios in Florida：#3");
-            System.out.println("Universal Studios in Osaka：#4");
-            System.out.println("Universal Studios in Singapore：#5");
+            System.out.println("UniversalStudios in Beijing：#1");
+            System.out.println("UniversalStudios in LosAngeles：#2");
+            System.out.println("UniversalStudios in Florida：#3");
+            System.out.println("UniversalStudios in Osaka：#4");
+            System.out.println("UniversalStudios in Singapore：#5");
             System.out.println("exit：#exit");
             System.out.println("please choose the Universal Studio to buy tickets:");
             //接受输入的指令
@@ -19,20 +19,20 @@ public class CheckCOVID19 {
                 break;
             }
             else if (Objects.equals(cmd,"#1")){
-                condition.freeRide("Universal Studios in Beijing");
+                condition.freeRide("UniversalStudios in Beijing");
             }
             else if (Objects.equals(cmd,"#2")){
-                condition.freeRide("Universal Studios in Los Angeles");
+                condition.freeRide("UniversalStudios in LosAngeles");
             }
             else if (Objects.equals(cmd,"#3")){
-                condition.freeRide("Universal Studios in Florida");
+                condition.freeRide("UniversalStudios in Florida");
             }
             else if (Objects.equals(cmd,"#4")){
-                condition.freeRide("Universal Studios in Osaka");
+                condition.freeRide("UniversalStudios in Osaka");
 
             }
             else if (Objects.equals(cmd,"#5")){
-                condition.freeRide("Universal Studios in Singapore");
+                condition.freeRide("UniversalStudios in Singapore");
             }
             else{
                 System.out.println("please input right command.");

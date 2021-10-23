@@ -1,7 +1,7 @@
 package tj.sse.ticketSystem.memento;
 
 //发起人
-class Originator {
+public class Originator {
     private String state;
 
     public void setState(String state) {
