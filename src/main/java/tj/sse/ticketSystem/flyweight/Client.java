@@ -7,9 +7,9 @@ package tj.sse.ticketSystem.flyweight;
  * @Date 2021/10/22 14:51
  * @Version 1.0
  **/
-class Client {
+public class Client {
 
-    public static void main(String[] args) {
+    public static void main() {
         int extrinsic = 0;
 
         tj.sse.ticketSystem.flyweight.Flyweight flyweightX = tj.sse.ticketSystem.flyweight.FlyweightFactory.getFlyweight("Adult ticket");
