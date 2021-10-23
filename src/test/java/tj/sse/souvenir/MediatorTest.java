@@ -4,16 +4,13 @@ import org.junit.jupiter.api.Test;
 import tj.sse.AppTest;
 import tj.sse.Souvenir.mediator.*;
 
-import java.util.*;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 /**
  * 周边售卖中介代理的测试
  */
 public class MediatorTest {
     @Test
     public void test(){
+        System.out.println("---------------- [Souvenir Test] --------------");
         Mediator md = new ConcreteMediator();
         Trader c1, c2;
         c1 = new ConcreteTrader1();
@@ -21,9 +18,8 @@ public class MediatorTest {
         md.register(c1);
         md.register(c2);
 
-        System.out.println("\n【Souvenir agent: Do you want to buy some souvenirs？（Y/N）】");
-
         if(AppTest.input){
+            System.out.println("\n【Souvenir agent: Do you want to enter souvenirs market？（Y/N）】");
             while (true){
                 String choice;
                 choice = AppTest.scanner.next();
@@ -36,12 +32,12 @@ public class MediatorTest {
                     break;
                 }
                 else
-                    System.out.println("Please enter Y/N:");
+                    System.out.println("error");
             }
         }else{
-            c1.send();
+            c1.autoSend();
             System.out.println("-------------");
-            c2.send();
+            c2.autoSend();
             return;
         }
         System.out.println("-----------------------[End]--------------------------");
