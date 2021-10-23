@@ -1,4 +1,6 @@
-package tj.sse.playItems.route.iterator;
+package tj.sse.playItems.Route.iterator;
+
+import tj.sse.playItems.Route.strategy.strategyA;
 
 /**
  * @ClassNameSpotsName
@@ -9,10 +11,11 @@ package tj.sse.playItems.route.iterator;
  **/
 
 public class SpotsName implements Spots {
-    public String[] names = {};
+    strategyA route=new strategyA();
+    public String[] names = route.provideSuggestions();
 
     @Override
-    public tj.sse.playItems.route.iterator.Route getRoute() {
+    public Route getRoute() {
         return new SpotsRoute();
     }
 
@@ -29,7 +32,6 @@ public class SpotsName implements Spots {
         @Override
         public Object next(){
             if (this.hasNext()) {
-
                 return names[index++];
             }
             return null;
