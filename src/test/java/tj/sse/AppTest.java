@@ -18,7 +18,6 @@ import static org.junit.platform.engine.discovery.ClassNameFilter.includeClassNa
  * @date 2021/10/19 19:24
  * @description 全部测试
  */
-
 public class AppTest {
     public static boolean input=false;
     public static Scanner scanner;

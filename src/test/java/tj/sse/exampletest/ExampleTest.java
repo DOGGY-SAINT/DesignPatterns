@@ -1,6 +1,8 @@
 package tj.sse.exampletest;
 
+
 import org.junit.jupiter.api.Test;
+import tj.sse.App;
 import tj.sse.AppTest;
 
 import java.util.Scanner;
