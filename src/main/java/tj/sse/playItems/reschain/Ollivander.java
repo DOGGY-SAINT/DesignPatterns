@@ -1,4 +1,4 @@
-package tj.sse.playItems.resChain;
+package tj.sse.playItems.reschain;
 
 //具体处理者1：奥利凡德（魔杖制作师）
 class Ollivander extends Staff {

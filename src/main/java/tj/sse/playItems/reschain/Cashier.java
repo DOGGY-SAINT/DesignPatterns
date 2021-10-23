@@ -1,4 +1,4 @@
-package tj.sse.playItems.resChain;
+package tj.sse.playItems.reschain;
 
 //具体处理者2：收银员类
 class Cashier extends Staff {

@@ -1,4 +1,4 @@
-package tj.sse.playItems.resChain;
+package tj.sse.playItems.reschain;
 
 import tj.sse.playItems.visitor.StampDisplayVisitor;
 import tj.sse.playItems.visitor.StampWand;

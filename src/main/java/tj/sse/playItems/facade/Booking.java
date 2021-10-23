@@ -1,7 +1,7 @@
 package tj.sse.playItems.facade;
 
 import tj.sse.playItems.state.QuidditchGame;
-import tj.sse.playItems.resChain.WandGame;
+import tj.sse.playItems.reschain.WandGame;
 import tj.sse.playItems.observer.PotionsClass;
 import tj.sse.playItems.template.templatemethod;
 import tj.sse.playItems.decorator.RobotGame;

@@ -1,4 +1,4 @@
-package tj.sse.playItems.resChain;
+package tj.sse.playItems.reschain;
 
 //抽象处理者：职员类
  abstract class Staff {

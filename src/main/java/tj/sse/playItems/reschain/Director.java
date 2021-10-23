@@ -1,4 +1,4 @@
-package tj.sse.playItems.resChain;
+package tj.sse.playItems.reschain;
 
 //具体处理者3：指导者
     class Director extends Staff {

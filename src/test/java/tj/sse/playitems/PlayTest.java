@@ -5,7 +5,7 @@ import tj.sse.AppTest;
 import tj.sse.playItems.decorator.RobotGame;
 import tj.sse.playItems.facade.Booking;
 import tj.sse.playItems.observer.PotionsClass;
-import tj.sse.playItems.resChain.WandGame;
+import tj.sse.playItems.reschain.WandGame;
 import tj.sse.playItems.route.iterator.Route;
 import tj.sse.playItems.route.iterator.SpotsName;
 import tj.sse.playItems.state.QuidditchGame;
@@ -18,7 +18,7 @@ import tj.sse.playItems.template.templatemethod;
 public class PlayTest {
     @Test
     public void test(){
-        System.out.println("---------------- [Playitems Test] --------------");
+        System.out.println("--------------------------------- [Playitems Test] --------------------------------");
         //一些变量声明
         tj.sse.playItems.Route.strategy.strategyA Route=new tj.sse.playItems.Route.strategy.strategyA();
         String[] path = Route.provideSuggestions();
@@ -106,9 +106,8 @@ public class PlayTest {
             RobotGame robotGame = new RobotGame();
             robotGame.play();
 
-            return;
         }
-        System.out.println("-----------------------[End]--------------------------");
+        System.out.println("----------------------------------------[End]---------------------------------------------");
 
     }
 
