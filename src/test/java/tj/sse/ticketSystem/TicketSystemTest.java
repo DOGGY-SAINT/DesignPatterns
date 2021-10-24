@@ -3,9 +3,6 @@ package tj.sse.ticketSystem;
 import org.junit.jupiter.api.Test;
 import tj.sse.AppTest;
 
-import tj.sse.ticketSystem.interpreter.Context;
-import tj.sse.ticketSystem.memento.Caretaker;
-import tj.sse.ticketSystem.memento.Originator;
 import tj.sse.ticketSystem.proxy.MeiTuan;
 import tj.sse.ticketSystem.proxy.QuNaEr;
 import tj.sse.ticketSystem.proxy.Tongcheng;

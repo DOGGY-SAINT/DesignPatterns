@@ -11,7 +11,7 @@ class AndExpression implements Expression {
     }
 
     public boolean interpret(String info) {
-        String[] s = info.split("in");
+        String[] s = info.split(" in ");
         return address.interpret(s[0]) && name.interpret(s[1]);
     }
 }

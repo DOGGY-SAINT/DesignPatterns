@@ -2,8 +2,8 @@ package tj.sse.ticketSystem.interpreter;
 
 //环境类
 public class Context {
-    private String[] addresses = {"LosAngeles", "Florida", "Osaka", "Singapore"};
-    private String[] names = {"UniversalStudios"};
+    private String[] addresses = {"UniversalStudio"};
+    private String[] names = {"LosAngeles","Florida","Osaka","Singapore"};
     private Expression addressName;
 
     public Context() {
