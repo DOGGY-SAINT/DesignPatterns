@@ -16,10 +16,10 @@ public class QuNaEr implements Ticket {
     }
 
     public void preRequest() {
-        System.out.println("QuNaEr--UniversalStudio ticketSystem start...");
+        System.out.println("【QuNaEr】--UniversalStudio ticketSystem start...");
     }
 
     public void postRequest() {
-        System.out.println("QuNaEr--UniversalStudio ticketSystem start...");
+        System.out.println("【QuNaEr】--UniversalStudio ticketSystem start...");
     }
 }

@@ -16,10 +16,10 @@ public class Tongcheng implements Ticket {
     }
 
     public void preRequest() {
-        System.out.println("TongCheng--UniversalStudio ticketSystem start...");
+        System.out.println("【TongCheng】--UniversalStudio ticketSystem start...");
     }
 
     public void postRequest() {
-        System.out.println("Tongcheng--UniversalStudio ticketSystem end...");
+        System.out.println("【ongcheng】--UniversalStudio ticketSystem end...");
     }
 }

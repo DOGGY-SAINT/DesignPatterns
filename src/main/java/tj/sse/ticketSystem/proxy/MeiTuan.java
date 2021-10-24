@@ -13,9 +13,9 @@ public class MeiTuan implements Ticket{
         postRequest();
     }
     public void preRequest() {
-        System.out.println("MeiTuan--UniversalStudio ticketSystem start...");
+        System.out.println("【MeiTuan】--UniversalStudio ticketSystem start...");
     }
     public void postRequest() {
-        System.out.println("MeiTuan--UniversalStudio ticketSystem end...");
+        System.out.println("【MeiTuan】--UniversalStudio ticketSystem end...");
     }
 }

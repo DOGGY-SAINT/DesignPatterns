@@ -9,9 +9,14 @@ import tj.sse.ticketSystem.interpreter.CheckCOVID19;
 //真实主题：环球影城门票
 public class UniversalStudiosTickets implements Ticket {
     public void display() {
+        System.out.println("------ [Test] memento -------");
         InfoRecovery.infoRecovery();
+        System.out.println("----------- [End]  ----------");
+        System.out.println("---- [Test] flyweight ----");
         Client.main();
+        System.out.println("---------- [End]  --------");
+        System.out.println("---- [Test] interpreter ----");
         CheckCOVID19.checkCOVID19();
-        System.out.println("----data saved!----");
+        System.out.println("----------- [End]  ---------");
     }
 }
