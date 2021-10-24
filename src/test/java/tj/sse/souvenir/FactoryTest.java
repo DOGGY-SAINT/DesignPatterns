@@ -59,7 +59,6 @@ public class FactoryTest {
             souvenir2.draw();
             movie1.create();
             movie2.create();
-            System.out.println("Enter any character to exit！");
         }
         System.out.println("-------------------------[End]----------------------------");
 
