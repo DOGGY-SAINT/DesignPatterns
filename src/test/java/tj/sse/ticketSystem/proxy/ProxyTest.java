@@ -36,7 +36,9 @@ public class ProxyTest {
             }
         }
         else{
-
+            Mproxy.display();
+            Tproxy.display();
+            Qproxy.display();
         }
         System.out.println("--------------------- [End]  ----------------------");
     }

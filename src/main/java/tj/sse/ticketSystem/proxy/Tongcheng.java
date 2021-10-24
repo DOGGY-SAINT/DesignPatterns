@@ -20,6 +20,6 @@ public class Tongcheng implements Ticket {
     }
 
     public void postRequest() {
-        System.out.println("【ongcheng】--UniversalStudio ticketSystem end...");
+        System.out.println("【Tongcheng】--UniversalStudio ticketSystem end...");
     }
 }
