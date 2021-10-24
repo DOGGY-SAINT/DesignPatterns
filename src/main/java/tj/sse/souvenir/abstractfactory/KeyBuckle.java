@@ -1,4 +1,4 @@
-package tj.sse.Souvenir.abstractfactory;
+package tj.sse.souvenir.abstractfactory;
 
 class KeyBuckle implements ISouvenir {
     @Override

@@ -1,4 +1,4 @@
-package tj.sse.Souvenir.abstractfactory;
+package tj.sse.souvenir.abstractfactory;
 
 public class FactoryProducer {
     public static AbstractFactory getFactory(String choice){

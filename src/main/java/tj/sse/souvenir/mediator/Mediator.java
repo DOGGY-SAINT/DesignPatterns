@@ -1,4 +1,4 @@
-package tj.sse.Souvenir.mediator;
+package tj.sse.souvenir.mediator;
 
 //抽象中介者
 public abstract class Mediator {

@@ -2,7 +2,7 @@ package tj.sse.souvenir;
 
 import org.junit.jupiter.api.Test;
 import tj.sse.AppTest;
-import tj.sse.Souvenir.mediator.*;
+import tj.sse.souvenir.mediator.*;
 
 /**
  * 周边售卖中介代理的测试
@@ -10,7 +10,7 @@ import tj.sse.Souvenir.mediator.*;
 public class MediatorTest {
     @Test
     public void test(){
-        System.out.println("---------------- [Souvenir Test] --------------");
+        System.out.println("-------------------- [Mediator Test] -------------------");
         Mediator md = new ConcreteMediator();
         Trader c1, c2;
         c1 = new ConcreteTrader1();
@@ -38,9 +38,8 @@ public class MediatorTest {
             c1.autoSend();
             System.out.println("-------------");
             c2.autoSend();
-            return;
         }
-        System.out.println("-----------------------[End]--------------------------");
+        System.out.println("-------------------------[End]----------------------------");
 
     }
 

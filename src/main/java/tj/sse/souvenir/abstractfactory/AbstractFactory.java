@@ -1,4 +1,4 @@
-package tj.sse.Souvenir.abstractfactory;
+package tj.sse.souvenir.abstractfactory;
 
 abstract public class AbstractFactory {
     public abstract MovieIP getMovieIP(String movie);

@@ -1,4 +1,4 @@
-package tj.sse.Souvenir.abstractfactory;
+package tj.sse.souvenir.abstractfactory;
 
 //小黄人
 public class Minions implements MovieIP{

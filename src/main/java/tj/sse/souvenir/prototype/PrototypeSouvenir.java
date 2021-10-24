@@ -1,4 +1,4 @@
-package tj.sse.Souvenir.prototype;
+package tj.sse.souvenir.prototype;
 
 
 public class PrototypeSouvenir extends Souvenir{
