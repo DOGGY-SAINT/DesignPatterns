@@ -20,10 +20,12 @@ public class MilkTeaMachine {
      * */
     public MilkTea getMilkTea(String milkTeaName){
         if(milkTeaName=="PearlMilkTea")
-            return milkTeaMakers[0].makeMilkTea("");
+            return getMilkTea(milkTeaMakers[0]);
         else if(milkTeaName=="CocountMilkTea")
-            return milkTeaMakers[1].makeMilkTea("");
+            return getMilkTea(milkTeaMakers[1]);
         else
             return milkTeaMakers[2].makeMilkTea(milkTeaName);
     }
+
+    public MilkTea getMilkTea(MilkTeaMaker maker){return maker.makeMilkTea("");}
 }
