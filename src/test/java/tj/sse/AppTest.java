@@ -41,7 +41,13 @@ public class AppTest {
                 System.out.println("Not auto");
             else
                 System.out.println("Auto");
-            System.out.println("0-"+(testIdentifierArray.length-1)+" test,"+testIdentifierArray.length+" automatically test all,-1 change mode,-2 list,-3 exit");
+            System.out.println("==========Menu==========\n"
+                    +"0-"+(testIdentifierArray.length-1)+" test\n"
+                    +testIdentifierArray.length+" automatically test all\n"
+                    +"-1 change mode\n"
+                    +"-2 list\n"
+                    +"-3 exit\n"
+                    +"==========End==========");
             int choice = scanner.nextInt();
             if (choice == -3) {
                 break;
