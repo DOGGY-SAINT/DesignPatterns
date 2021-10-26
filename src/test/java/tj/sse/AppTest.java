@@ -45,7 +45,7 @@ public class AppTest {
                     +"0-"+(testIdentifierArray.length-1)+" test\n"
                     +testIdentifierArray.length+" automatically test all\n"
                     +"-1 change mode\n"
-                    +"-2 list\n"
+                    +"-2 test list\n"
                     +"-3 exit\n"
                     +"==========End==========");
             int choice = scanner.nextInt();

@@ -9,10 +9,18 @@ public class QuNaEr implements Ticket {
         this.realSubject = target;
     }
 
-    public void display() {
-        preRequest();
-        realSubject.display();
-        postRequest();
+    @Override
+    public void ask() {
+        if(realSubject.type==-1)
+            preRequest();
+        realSubject.ask();
+    }
+
+    public int display(String req) {
+        realSubject.display(req);
+        if(realSubject.type==-2)
+            postRequest();
+        return realSubject.type;
     }
 
     public void preRequest() {

@@ -20,13 +20,13 @@ public class FlyweightFactory {
 
         if (pool.containsKey(extrinsic)) {    //池中有该对象
             flyweight = pool.get(extrinsic);
-            System.out.print("Already existing " + extrinsic + " sale directly---->");
+            System.out.println("Already existing " + extrinsic + " sale directly---->");
         } else {
             //根据外部状态创建享元对象
             flyweight = new ConcreteFlyweight(extrinsic);
             //放入池中
             pool.put(extrinsic, flyweight);
-            System.out.print("Establish " + extrinsic + " and sale directly---->");
+            System.out.println("Establish " + extrinsic + " and sale directly---->");
         }
 
         return flyweight;
