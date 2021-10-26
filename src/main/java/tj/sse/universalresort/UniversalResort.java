@@ -17,18 +17,7 @@ public class UniversalResort {
      * @param []
      * @return
      * */
-    private UniversalResort(){
-        init();
-    }
-
-    /**
-     * @class UniversalResort
-     * @method init
-     * @description 实例初始化函数
-     * @param []
-     * @return void
-     * */
-    private void init(){}
+    private UniversalResort(){}
 
     /**
      * @class UniversalResort
