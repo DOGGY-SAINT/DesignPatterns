@@ -11,7 +11,7 @@ import tj.sse.AppTest;
 public class UniversalResortTest {
     @Test
     public void Test(){
-        System.out.println("---------------- [Test] UniversalResort ----------------");
+        System.out.println("---------------- [Test] Singleton ----------------");
         UniversalResort u1=UniversalResort.getInstance(),u2=UniversalResort.getInstance();
         if(AppTest.input){
             while(true){

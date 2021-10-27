@@ -1,6 +1,6 @@
 package tj.sse.playItems.route.iterator;
 
-import tj.sse.playItems.Route.strategy.strategyA;
+import tj.sse.playItems.route.strategy.strategyA;
 
 /**
  * @ClassNameSpotsName

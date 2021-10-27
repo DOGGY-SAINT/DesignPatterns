@@ -15,7 +15,7 @@ public class DrinksTest {
     @Test
     public void drinksTest()
     {
-        System.out.println("---------------- [Test] Drinks ----------------");
+        System.out.println("---------------- [Test] Factory Method ----------------");
         if(AppTest.input){
             System.out.println("Do you want Fanta or Coke?:");
             String str= AppTest.scanner.next();
@@ -35,6 +35,6 @@ public class DrinksTest {
             mt=seller.getDrinks("Fanta");;
             System.out.println(mt.getInf());
         }
-        System.out.println("------------------- [End] -------------------");
+        System.out.println("--------------------- [End] ---------------------");
     }
 }

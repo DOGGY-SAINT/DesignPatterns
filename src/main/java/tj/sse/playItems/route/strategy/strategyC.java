@@ -1,4 +1,4 @@
-package tj.sse.playItems.Route.strategy;
+package tj.sse.playItems.route.strategy;
 
 public class strategyC extends routePlanning {
 

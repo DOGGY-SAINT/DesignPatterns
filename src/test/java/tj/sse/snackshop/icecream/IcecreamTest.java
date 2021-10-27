@@ -16,8 +16,7 @@ public class IcecreamTest {
     @Test
     public void IcecreamTest()
     {
-
-        System.out.println("--------------- [Test] Icecream -------------");
+        System.out.println("--------------- [Test] Adapter -------------");
         if(AppTest.input){
             System.out.println("What flavor of ice cream do you want(blueberries, chocolate, or something else):");
             String str= AppTest.scanner.next();

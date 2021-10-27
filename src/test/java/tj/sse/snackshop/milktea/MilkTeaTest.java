@@ -58,6 +58,7 @@ public class MilkTeaTest {
             }
         }
         else{
+            System.out.println("---------------- [Test] Builder ----------------");
             MilkTeaMachine machine=new MilkTeaMachine();
             MilkTea mt;
             System.out.println("Template milk tea:");
@@ -65,7 +66,9 @@ public class MilkTeaTest {
             System.out.println(mt.getInf());
             mt=machine.getMilkTea("CocountMilkTea");
             System.out.println(mt.getInf());
+            System.out.println("--------------------- [End] ---------------------");
 
+            System.out.println("---------------- [Test] Bridge ----------------");
             System.out.println("");
             System.out.println("Free set milk tea:");
             mt=machine.getMilkTea("Hot;HalfSuger;Cocount");
@@ -73,6 +76,6 @@ public class MilkTeaTest {
             mt=machine.getMilkTea("Cold;LittleSuger;Pearl");
             System.out.println(mt.getInf());
         }
-        System.out.println("--------------------- [End] ------------------");
+        System.out.println("--------------------- [End] ---------------------");
     }
 }

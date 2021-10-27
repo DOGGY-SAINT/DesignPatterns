@@ -9,7 +9,7 @@ import java.util.Objects;
 
 public class TicketSystemTest {
     @Test
-    public void proxyTest() {
+    public void test() {
         System.out.println("---------------  [Test] proxy   ---------------");
         UniversalStudiosTickets target = new UniversalStudiosTickets();
         //代理对象,把目标对象传给代理对象,建立代理关系
@@ -43,6 +43,13 @@ public class TicketSystemTest {
         } else {
             ticket=new MeiTuan(target);
             ticket.ask();
+            System.out.println("#exit");
+            ticket.display("#exit");
+            System.out.println("--------------------- [End]  ----------------------");
+
+            ticket=new MeiTuan(new UniversalStudiosTickets());
+            System.out.println("-------------------- [Test] Memento --------------------");
+            ticket.ask();
             System.out.println("#input");
             ticket.display("#input");
             ticket.ask();
@@ -57,12 +64,19 @@ public class TicketSystemTest {
             ticket.ask();
             System.out.println("#rollback");
             ticket.display("#rollback");
+            System.out.println("--------------------- [End]  ----------------------");
+
             ticket.ask();
             System.out.println("#continue");
             ticket.display("#continue");
+
+            System.out.println("-------------------- [Test] Flyweight --------------------");
             ticket.ask();
             System.out.println("#1");
             ticket.display("#1");
+            System.out.println("--------------------- [End]  ----------------------");
+
+            System.out.println("-------------------- [Test] Interpreter --------------------");
             ticket.ask();
             System.out.println("#2");
             ticket.display("#2");

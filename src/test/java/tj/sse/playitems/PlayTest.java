@@ -10,6 +10,10 @@ import tj.sse.playItems.route.iterator.Route;
 import tj.sse.playItems.route.iterator.SpotsName;
 import tj.sse.playItems.state.QuidditchGame;
 import tj.sse.playItems.template.templatemethod;
+import tj.sse.playItems.visitor.StampDisplayVisitor;
+import tj.sse.playItems.visitor.StampQuidditch;
+
+import java.util.Arrays;
 
 
 /**
@@ -20,7 +24,7 @@ public class PlayTest {
     public void test(){
         System.out.println("--------------------------------- [Playitems Test] --------------------------------");
         //一些变量声明
-        tj.sse.playItems.Route.strategy.strategyA Route=new tj.sse.playItems.Route.strategy.strategyA();
+        tj.sse.playItems.route.strategy.strategyA Route=new tj.sse.playItems.route.strategy.strategyA();
         String[] path = Route.provideSuggestions();
 
         SpotsName spotsName=new SpotsName();
@@ -73,35 +77,59 @@ public class PlayTest {
                     System.out.println("error");
             }
         }else{
+            System.out.println("---------------- [Test] Strategy ----------------");
+            System.out.println(Arrays.toString(Route.provideSuggestions()));
+            System.out.println("--------------------- [End] ---------------------");
+
             //无交互
+            System.out.println("---------------- [Test] Facade ----------------");
             Booking book = new Booking();
             for(int i = 0; i < path.length; i++){
                 book.book(path[i]);
             }
+            System.out.println("--------------------- [End] ---------------------");
 
+            System.out.println("---------------- [Test] Iterator ----------------");
             System.out.println("THE GAME SEQUENCE:");
             for(tj.sse.playItems.route.iterator.Route route = spotsName.getRoute(); route.hasNext();){
                 String name=(String)route.next();
                 System.out.println("Game Name:"+name);
             }
+            System.out.println("--------------------- [End] ---------------------");
+
+            System.out.println("---------------- [Test] Visitor ----------------");
+            StampQuidditch sq = new StampQuidditch();
+            StampDisplayVisitor sdv=new StampDisplayVisitor();
+            sdv.visit(sq);
+            System.out.println("--------------------- [End] ---------------------");
+
+            System.out.println("---------------- [Test] State ----------------");
             System.out.println("-----Quidditch----");
             QuidditchGame quidditch = new QuidditchGame();
             quidditch.play();
+            System.out.println("--------------------- [End] ---------------------");
 
+            System.out.println("---------------- [Test] Chain Of Responsibility ----------------");
             System.out.println("----WandGame----");
             WandGame wandGame = new WandGame();
             wandGame.play();
+            System.out.println("--------------------- [End] ---------------------");
 
+            System.out.println("---------------- [Test] Observer ----------------");
             System.out.println("-----PotionClass------");
             PotionsClass potionClass = new PotionsClass();
             potionClass.play();
+            System.out.println("--------------------- [End] ---------------------");
 
+            System.out.println("---------------- [Test] Template Method ----------------");
             templatemethod coaster = new templatemethod();
             System.out.println("-----JurassicFlyerscoaster------");
             coaster.playJurassicFlyersCoaster();
             System.out.println("-----DeceptiCoaster----");
             coaster.playDecepticoaster();
+            System.out.println("--------------------- [End] ---------------------");
 
+            System.out.println("---------------- [Test] Decorator ----------------");
             System.out.println("-----Robot Game------");
             RobotGame robotGame = new RobotGame();
             robotGame.play();

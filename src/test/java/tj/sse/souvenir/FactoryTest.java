@@ -80,6 +80,7 @@ public class FactoryTest {
 
             }
         }else{
+            System.out.println("--------------- [Test] Abstract Factory -------------");
             AbstractFactory souvenirFactory = FactoryProducer.getFactory("doll");
             AbstractFactory movieIpFactory=FactoryProducer.getFactory("keybuckle");
             PandaDoll souvenir1= (PandaDoll) souvenirFactory.newKungFuPanda();
@@ -90,7 +91,9 @@ public class FactoryTest {
             souvenir2.create();
             souvenir3.create();
             souvenir4.create();
+            System.out.println("-------------------------[End]----------------------------");
 
+            System.out.println("--------------- [Test] Prototype -------------");
             Souvenir prototype1 = new PrototypeSouvenir();
             try {
                 PrototypeSouvenir concretePrototype1 = (PrototypeSouvenir) prototype1.clone();

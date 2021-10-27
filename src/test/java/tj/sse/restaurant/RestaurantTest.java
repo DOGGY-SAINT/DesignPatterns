@@ -14,6 +14,7 @@ public class RestaurantTest {
     public void restaruanrTest(){
         System.out.println("------------------[Restaurant Test]---------------------");
 
+        System.out.println("---------------- [Test] Composite ----------------");
         Menu menu = new Menu("Harry Potter restaurant menu");
         Menu menu1 = new Menu("ChickenRib Platter: 200.0");
         Menu menu2 = new Menu("Rib Platter:\t100.0");
@@ -40,7 +41,9 @@ public class RestaurantTest {
 
         //打印所有菜单
         menu.print(0);
+        System.out.println("--------------------- [End] ---------------------");
 
+        System.out.println("---------------- [Test] Command ----------------");
         //实例化点菜模板
         Food food1 = new Chicken();
         Food food2 = new Rib();
