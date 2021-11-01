@@ -3,6 +3,14 @@ package tj.sse.playItems.decorator;
 import tj.sse.playItems.visitor.StampDisplayVisitor;
 import tj.sse.playItems.visitor.StampRobot;
 
+/**
+ * @Classname RobotGame
+ * @Description This is a Class for RobotGame which implements related operation for a game
+ *                  like book, play and end.
+ * @Author Mocha
+ * @Date 2021/10/22 14:52
+ * @Version 1.0
+ **/
 public class RobotGame {
 
     public void book(){

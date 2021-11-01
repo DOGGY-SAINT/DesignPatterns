@@ -3,7 +3,7 @@ package tj.sse.snackshop.icecream;
 /**
  * @Classname Adapter
  * @Description 制作风味冰淇淋，适配器模式
- * @Author asus
+ * @Author tianxi
  * @Date 2021-10-16 0:38
  * @Version 1.0
  **/

@@ -2,7 +2,13 @@ package tj.sse.restaurant.menucomponent;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * @Classname Menu
+ * @Description 菜单类的具体实现
+ * @Author Wang Haoting
+ * @Date 2021/10/22 14:52
+ * @Version 1.0
+ **/
 
 public class Menu extends MenuComponent {
     private List<MenuComponent> menuList = new ArrayList<>();

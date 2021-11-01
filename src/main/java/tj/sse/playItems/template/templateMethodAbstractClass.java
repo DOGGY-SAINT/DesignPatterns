@@ -1,6 +1,6 @@
 package tj.sse.playItems.template;
 
-// 抽象类
+//模板方法抽象基类
 abstract class templateMethodAbstractClass {
     //模板方法
     public void TemplateMethod() {
@@ -38,6 +38,6 @@ abstract class templateMethodAbstractClass {
         System.out.println("clean rollercoaster.");
     }
 
-    //抽象方法1
+    //抽象方法
     public abstract void startRollerCoaster();
 }

@@ -1,5 +1,12 @@
 package tj.sse.playItems.decorator;
 
+/**
+ * @Classname Robot_C
+ * @Description A concrete class C extends from Decorator with new functions.
+ * @Author Mocha
+ * @Date 2021/10/22 14:57
+ * @Version 1.0
+ **/
 public class Robot_C extends RobotDecorator{
     public Robot_C(Robot robot){
         super(robot);
