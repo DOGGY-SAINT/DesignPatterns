@@ -39,13 +39,19 @@ public class SnackshopTest {
                     mt=seller.getDrinks(str);
                     if(mt==null)
                         System.out.println(str+" not exist");
-                    else
+                    else{
+                        System.out.println("With a spell, your hands appeared out of thin air:");
                         System.out.println(mt.getInf());
+                    }
                 }
                 else if(i==2){
                     System.out.println("--------------- [Test] Adapter ---------------");
-                    System.out.println("What flavor of ice cream do you want(blueberries, chocolate, or something else):");
+                    System.out.println("If you don't want to buy anything, please enter NO.");
+                    System.out.println("What flavor of ice cream do you want(blueberries, chocolate, nothing or something else):");
                     String str= AppTest.scanner.next();
+                    if(str.equals("NO")){
+                        continue;
+                    }
                     IcecreamMachine im=new IcecreamMachine();
                     System.out.println(im.getIcecream(str));
                 }
@@ -63,9 +69,11 @@ public class SnackshopTest {
                     MilkTea mt;
                     if (choose == 1) {
                         mt = machine.getMilkTea("PearlMilkTea");
+                        System.out.println("With a spell, your hands appeared out of thin air:");
                         System.out.println("Your MilkTea:" + mt.getInf());
                     } else if (choose == 2) {
                         mt = machine.getMilkTea("CocountMilkTea");
+                        System.out.println("With a spell, your hands appeared out of thin air:");
                         System.out.println("Your MilkTea:" + mt.getInf());
                     } else if (choose == 3) {
                         System.out.println("Ice:Hot/Cold");
@@ -77,11 +85,14 @@ public class SnackshopTest {
                         mt = machine.getMilkTea(str);
                         if (mt == null)
                             System.out.println("Wrong input");
-                        else
+                        else{
+                            System.out.println("With a spell, your hands appeared out of thin air:");
                             System.out.println("Your MilkTea:" + mt.getInf());
+                        }
                     } else if (choose == 4) {
                         System.out.println("Send you a cup of milk tea, maybe you will become addicted!");
                         mt = machine.getMilkTea("PearlMilkTea");
+                        System.out.println("With a spell, your hands appeared out of thin air:");
                         System.out.println("Your MilkTea:" + mt.getInf());
                     } else {
                         System.out.println("The option you entered does not exist.");

@@ -3,7 +3,7 @@ package tj.sse.snackshop.icecream;
 /**
  * @Classname IcecreamMachine
  * @Description 制作冰淇淋的机器，适配器模式+建造者？不太确定，这个类也可以删去
- * @Author asus
+ * @Author tianxi
  * @Date 2021-10-16 0:51
  * @Version 1.0
  **/
