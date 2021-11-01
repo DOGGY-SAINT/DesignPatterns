@@ -8,6 +8,13 @@ package tj.sse.snackshop.milktea;
  * @Version 1.0
  **/
 public class LittleSuger implements Sweetness {
+    /**
+     * @class LittleSuger.java
+     * @method getSweetness
+     * @description 继承，获取糖度
+     * @param []
+     * @return java.lang.String
+     * */
     @Override
     public String getSweetness() {
         return "LittleSuger";
