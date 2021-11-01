@@ -8,19 +8,29 @@ package tj.sse.ticketsystem.memento;
  * @Version 1.0
  **/
 public class Caretaker {
-
+    /**
+     * @Description 备忘录
+     **/
     private Memento memento;
 
     /**
-     * @Description 存入备忘录
-     **/
+     * @class Caretaker
+     * @method setMemento
+     * @description 存入备忘录
+     * @param [m]
+     * @return void
+     * */
     public void setMemento(Memento m) {
         memento = m;
     }
 
     /**
-     * @Description 读取备忘录
-     **/
+     * @class Caretaker
+     * @method getMemento
+     * @description 读取备忘录
+     * @param []
+     * @return void
+     * */
     public Memento getMemento() {
         return memento;
     }
