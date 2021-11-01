@@ -6,7 +6,12 @@ package tj.sse.playItems.route.strategy;
 public class strategyB extends routePlanning {
 
     public String[] provideSuggestions() {
-        String[] names = {"WandGame", "PotionClass", "JurassicFlyersCoasterGame", "DecepticoasterGame", "RobotGame"};
+        String[] names = {"WandGame",
+                "PotionClass",
+                "JurassicFlyersCoasterGame",
+                "DecepticoasterGame",
+                "RobotGame",
+                "QuidditchGame"};
         return names;
     }
 }
