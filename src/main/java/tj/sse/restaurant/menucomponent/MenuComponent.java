@@ -1,5 +1,11 @@
 package tj.sse.restaurant.menucomponent;
-
+/**
+ * @Classname MenuComponent
+ * @Description 菜单抽象类，定义各类所需函数
+ * @Author Wang Haoting
+ * @Date 2021/10/22 14:52
+ * @Version 1.0
+ **/
 abstract class MenuComponent {
 
     public abstract void notChoose();
