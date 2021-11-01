@@ -71,7 +71,10 @@ public class FreeMilkTeaMaker implements MilkTeaMaker{
             setIce(requests[0]);
             setSweatness(requests[1]);
             setItem(requests[2]);
-            return milkTea;
+            if(milkTea.item==null||milkTea.sweetness==null)
+                return null;
+            else
+                return milkTea;
         }
         return null;
     }

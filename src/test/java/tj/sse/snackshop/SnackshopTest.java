@@ -83,6 +83,7 @@ public class SnackshopTest {
                         System.out.println("Please enter your milk tea type according to the above format:");
                         String str = AppTest.scanner.next();
                         mt = machine.getMilkTea(str);
+
                         if (mt == null)
                             System.out.println("Wrong input");
                         else{
