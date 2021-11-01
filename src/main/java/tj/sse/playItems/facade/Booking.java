@@ -5,6 +5,15 @@ import tj.sse.playItems.reschain.WandGame;
 import tj.sse.playItems.observer.PotionsClass;
 import tj.sse.playItems.template.templatemethod;
 import tj.sse.playItems.decorator.RobotGame;
+
+/**
+ * @Classname Booking
+ * @Description Offering united interface for other system, actually hoping to
+ *                  hide the complicity of inner system.
+ * @Author Mocha
+ * @Date 2021/10/22 14:52
+ * @Version 1.0
+ **/
 public class Booking {
     private WandGame wandGame = new WandGame();
     private QuidditchGame quidditch = new QuidditchGame();
