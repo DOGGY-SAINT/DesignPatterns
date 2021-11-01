@@ -11,21 +11,49 @@ public class CocountMilkTeaMaker implements MilkTeaMaker{
      * */
     private MilkTea milkTea;
 
+    /**
+     * @class CocountMilkTeaMaker.java
+     * @method setIce
+     * @description 继承，设置冰度
+     * @param [Ice]
+     * @return void
+     * */
     @Override
     public void setIce(String Ice) {
         milkTea=new ColdMilkTea();
     }
 
+    /**
+     * @class CocountMilkTeaMaker.java
+     * @method setSweatness
+     * @description 继承，设置甜度
+     * @param [sweatness]
+     * @return void
+     * */
     @Override
     public void setSweatness(String sweatness) {
         milkTea.setSweetness(new LittleSuger());
     }
 
+    /**
+     * @class CocountMilkTeaMaker.java
+     * @method setItem
+     * @description 继承，设置小料
+     * @param [item]
+     * @return void
+     * */
     @Override
     public void setItem(String item) {
         milkTea.setItem(new Cocount());
     }
 
+    /**
+     * @class CocountMilkTeaMaker.java
+     * @method makeMilkTea
+     * @description 继承，制作椰果奶茶
+     * @param [request]
+     * @return tj.sse.snackshop.milktea.MilkTea
+     * */
     @Override
     public MilkTea makeMilkTea(String request) {
         setIce("");

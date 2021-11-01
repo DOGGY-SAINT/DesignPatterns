@@ -27,5 +27,12 @@ public class MilkTeaMachine {
             return milkTeaMakers[2].makeMilkTea(milkTeaName);
     }
 
+    /**
+     * @class MilkTeaMachine.java
+     * @method getMilkTea
+     * @description 使用奶茶maker制作奶茶
+     * @param [maker]
+     * @return tj.sse.snackshop.milktea.MilkTea
+     * */
     public MilkTea getMilkTea(MilkTeaMaker maker){return maker.makeMilkTea("");}
 }
