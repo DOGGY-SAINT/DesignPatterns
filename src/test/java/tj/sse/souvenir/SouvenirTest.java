@@ -16,7 +16,6 @@ public class SouvenirTest {
     public void test(){
         System.out.println("--------------------- [Souvenir Test] -------------------");
         // 原型模式&抽象工厂模式测试
-//        System.out.println("-------------------- [Mediator Test] -------------------");
         Mediator md = new ConcreteMediator();
         Trader c1, c2;
         c1 = new ConcreteTrader1();
@@ -103,6 +102,7 @@ public class SouvenirTest {
                     System.out.println("Input error：Please input single Y or N.");
             }
         }else{
+            System.out.println("--------------- [Test] Abstract Factory -------------");
             AbstractFactory souvenirFactory = FactoryProducer.getFactory("doll");
             AbstractFactory movieIpFactory=FactoryProducer.getFactory("keybuckle");
             PandaDoll souvenir1= (PandaDoll) souvenirFactory.newKungFuPanda();
@@ -113,7 +113,9 @@ public class SouvenirTest {
             souvenir2.create();
             souvenir3.create();
             souvenir4.create();
+            System.out.println("-------------------------[End]----------------------------");
 
+            System.out.println("--------------- [Test] Prototype -------------");
             Souvenir prototype1 = new PrototypeSouvenir();
             try {
                 PrototypeSouvenir concretePrototype1 = (PrototypeSouvenir) prototype1.clone();
@@ -121,7 +123,9 @@ public class SouvenirTest {
                 e.printStackTrace();
             }
             System.out.println("Copied a souvenir！");
+            System.out.println("-------------------------[End]----------------------------");
 
+            System.out.println("-------------------- [Mediator Test] -------------------");
             c1.autoSend();
             System.out.println("-------------");
             c2.autoSend();
