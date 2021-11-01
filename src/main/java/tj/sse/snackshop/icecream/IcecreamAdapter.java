@@ -3,7 +3,7 @@ package tj.sse.snackshop.icecream;
 /**
  * @Classname Adapter
  * @Description 制作风味冰淇淋，适配器模式
- * @Author asus
+ * @Author tianxi
  * @Date 2021-10-16 0:38
  * @Version 1.0
  **/
@@ -18,6 +18,6 @@ public class IcecreamAdapter extends Icecream implements Flavour {
 
     @Override
     public String addFlavour(String f) {
-        return makeIcecream()+"+"+f;
+        return "You get an "+makeIcecream()+"+"+f;
     }
 }

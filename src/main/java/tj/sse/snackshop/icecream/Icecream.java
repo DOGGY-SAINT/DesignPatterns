@@ -9,7 +9,7 @@ package tj.sse.snackshop.icecream;
  **/
 public class Icecream {
     /**
-     *@Author asus
+     *@Author tianxi
      *@Description /制作原味冰淇淋，适配器模式
      *@Date 0:36 2021-10-16
      *@Param []

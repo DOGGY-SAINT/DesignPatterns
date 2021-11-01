@@ -11,6 +11,13 @@ public class FreeMilkTeaMaker implements MilkTeaMaker{
      * */
     private MilkTea milkTea;
 
+    /**
+     * @class FreeMilkTeaMaker.java
+     * @method setIce
+     * @description 继承，设置冰度
+     * @param [Ice]
+     * @return void
+     * */
     @Override
     public void setIce(String Ice) {
         if(Ice.equals("Hot"))
@@ -21,6 +28,13 @@ public class FreeMilkTeaMaker implements MilkTeaMaker{
             milkTea=null;
     }
 
+    /**
+     * @class FreeMilkTeaMaker.java
+     * @method setSweatness
+     * @description 继承，设置甜度
+     * @param [sweatness]
+     * @return void
+     * */
     @Override
     public void setSweatness(String sweatness) {
         if(sweatness.equals("HalfSuger"))
@@ -29,6 +43,13 @@ public class FreeMilkTeaMaker implements MilkTeaMaker{
             milkTea.setSweetness(new LittleSuger());
     }
 
+    /**
+     * @class FreeMilkTeaMaker.java
+     * @method setItem
+     * @description 继承，设置小料
+     * @param [item]
+     * @return void
+     * */
     @Override
     public void setItem(String item) {
         if(item.equals("Pearl"))
@@ -37,13 +58,23 @@ public class FreeMilkTeaMaker implements MilkTeaMaker{
             milkTea.setItem(new Cocount());
     }
 
+    /**
+     * @class FreeMilkTeaMaker.java
+     * @method makeMilkTea
+     * @description 继承，制作任意奶茶，分号分割
+     * @param [request]
+     * @return tj.sse.snackshop.milktea.MilkTea
+     * */
     public MilkTea makeMilkTea(String request){
         String[] requests=request.split(";");
         if (requests.length==3){
             setIce(requests[0]);
             setSweatness(requests[1]);
             setItem(requests[2]);
-            return milkTea;
+            if(milkTea.item==null||milkTea.sweetness==null)
+                return null;
+            else
+                return milkTea;
         }
         return null;
     }
