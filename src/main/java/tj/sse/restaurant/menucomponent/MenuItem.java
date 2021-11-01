@@ -1,5 +1,11 @@
 package tj.sse.restaurant.menucomponent;
-
+/**
+ * @Classname MenuComponent
+ * @Description 菜单类，重载定义所需函数
+ * @Author Wang Haoting
+ * @Date 2021/10/22 14:52
+ * @Version 1.0
+ **/
 public class MenuItem extends MenuComponent {
     private String name;
     private double price;
