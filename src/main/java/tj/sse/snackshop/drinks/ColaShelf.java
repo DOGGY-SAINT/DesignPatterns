@@ -6,6 +6,13 @@ package tj.sse.snackshop.drinks;
  * @description 可乐货架类，货架子类，工厂方法模式
  */
 public class ColaShelf implements Shelf{
+    /**
+     * @class ColaShelf.java
+     * @method getDrinks
+     * @description 继承，获取可乐饮料
+     * @param []
+     * @return tj.sse.snackshop.drinks.Drinks
+     * */
     @Override
     public Drinks getDrinks() {
         return new Cola();

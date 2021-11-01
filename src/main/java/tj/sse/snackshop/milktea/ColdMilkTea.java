@@ -8,6 +8,13 @@ package tj.sse.snackshop.milktea;
  * @Version 1.0
  **/
 public class ColdMilkTea extends MilkTea {
+    /**
+     * @class ColdMilkTea.java
+     * @method getInf
+     * @description 继承，返回奶茶具体信息
+     * @param []
+     * @return java.lang.String
+     * */
     @Override
     public String getInf(){
         return "Cold Milk Tea + "+sweetness.getSweetness()+" + "+item.getItem();

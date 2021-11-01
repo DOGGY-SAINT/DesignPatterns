@@ -18,6 +18,6 @@ public class IcecreamAdapter extends Icecream implements Flavour {
 
     @Override
     public String addFlavour(String f) {
-        return makeIcecream()+"+"+f;
+        return "You get an "+makeIcecream()+"+"+f;
     }
 }
