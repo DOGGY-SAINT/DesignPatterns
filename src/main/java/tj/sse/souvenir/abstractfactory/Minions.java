@@ -1,6 +1,9 @@
 package tj.sse.souvenir.abstractfactory;
 
 //小黄人
-interface Minions {
-    public void create();
+public class Minions implements MovieIP{
+    @Override
+    public void create() {
+        System.out.println("Minions");
+    }
 }
