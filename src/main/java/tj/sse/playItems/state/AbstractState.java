@@ -10,9 +10,10 @@ public abstract class AbstractState {
     public abstract void checkState(); //检查当前状态
 
     public void addScore(int x) {
-        score += x;
+        score += x;//修改当前分数并打印
         System.out.print("Plus：" + x + "，\tcurrent score：" + score);
         checkState();
+        //打印分数和奖品
         System.out.println("，\tcurrent state：" + en.getState().stateName);
         System.out.println("Your price is：" + en.getState().gift);
     }

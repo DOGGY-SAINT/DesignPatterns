@@ -16,7 +16,7 @@ import tj.sse.playItems.visitor.StampQuidditch;
 import java.util.Arrays;
 
 
-/**
+/**git
  * 娱乐项目的测试
  */
 public class PlayTest {
@@ -42,31 +42,61 @@ public class PlayTest {
                     for(int i = 0; i < path.length; i++){
                         book.book(path[i]);
                     }
-
+                    while (true){
+                        choice = AppTest.scanner.next();
+                        if(choice.equals("GO")||choice.equals("go")){
+                            break;
+                        }
+                    }
                     System.out.println("THE GAME SEQUENCE:");
                     for(Route route = spotsName.getRoute(); route.hasNext();){
                         String name=(String)route.next();
                         System.out.println("Game Name:"+name);
                     }
+                    while (true){
+                        choice = AppTest.scanner.next();
+                        if(choice.equals("GO")||choice.equals("go")){
+                            break;
+                        }
+                    }
                     System.out.println("-----Quidditch----");
                     QuidditchGame quidditch = new QuidditchGame();
                     quidditch.play();
-
+                    while (true){
+                        choice = AppTest.scanner.next();
+                        if(choice.equals("GO")||choice.equals("go")){
+                            break;
+                        }
+                    }
                     System.out.println("----WandGame----");
                     WandGame wandGame = new WandGame();
                     wandGame.play();
-
+                    while (true){
+                        choice = AppTest.scanner.next();
+                        if(choice.equals("GO")||choice.equals("go")){
+                            break;
+                        }
+                    }
                     System.out.println("-----PotionClass------");
                     PotionsClass potionClass = new PotionsClass();
                     potionClass.play();
-
-
+                    while (true){
+                        choice = AppTest.scanner.next();
+                        if(choice.equals("GO")||choice.equals("go")){
+                            break;
+                        }
+                    }
                     templatemethod coaster = new templatemethod();
                     System.out.println("-----JurassicFlyerscoaster------");
                     coaster.playJurassicFlyersCoaster();
                     System.out.println("-----DeceptiCoaster----");
                     coaster.playDecepticoaster();
-
+                    while (true){
+                        choice = AppTest.scanner.next();
+                        if(choice.equals("GO")||choice.equals("go")){
+                            break;
+                        }
+                    }
                     System.out.println("-----Robot Game------");
                     RobotGame robotGame = new RobotGame();
                     robotGame.play();

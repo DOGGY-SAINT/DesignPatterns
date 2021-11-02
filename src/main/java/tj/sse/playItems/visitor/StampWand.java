@@ -7,6 +7,8 @@ package tj.sse.playItems.visitor;
  * @Date2021/10/1514:33
  * @Version 1.0
  **/
+
+//具体元素StampWand
 public class StampWand implements Stamp{
     /*
      * @Param stampVisitor 访问工具

@@ -1,7 +1,5 @@
 package tj.sse.snackshop.drinks;
 
-import tj.sse.utils.MyLogger;
-
 /**
  * @author DOGGY_LEE
  * @date 2021/10/16 18:50

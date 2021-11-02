@@ -1,6 +1,5 @@
 package tj.sse.souvenir.mediator;
 
-
 //抽象交易者类
 public abstract class Trader {
     protected Mediator mediator;

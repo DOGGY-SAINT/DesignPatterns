@@ -11,6 +11,7 @@ import tj.sse.playItems.route.strategy.strategyA;
  **/
 
 public class SpotsName implements Spots {
+//    引入策略模式的策略
     strategyA route=new strategyA();
     public String[] names = route.provideSuggestions();
 
@@ -19,6 +20,7 @@ public class SpotsName implements Spots {
         return new SpotsRoute();
     }
 
+//    Route抽象迭代器的具体实现
     private class SpotsRoute implements Route {
         int index;
 

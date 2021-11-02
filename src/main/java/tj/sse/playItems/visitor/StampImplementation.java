@@ -10,7 +10,7 @@ package tj.sse.playItems.visitor;
 public class StampImplementation implements Stamp{
     Stamp[] parts;
 /*
- * @Description //访问元素初始化 包括魁地奇 魔杖 魔药课
+ * @Description //访问元素初始化 包括魁地奇 魔杖 魔药课...
  * @Date 15:10 2021/10/15
  * @Param
  * @return

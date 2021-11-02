@@ -6,6 +6,8 @@ package tj.sse.playItems.visitor;
  * @Param
  * @return
  **/
+
+//抽象元素接口
 public interface Stamp {
     /*
      * @Param stampVisitor 访问工具

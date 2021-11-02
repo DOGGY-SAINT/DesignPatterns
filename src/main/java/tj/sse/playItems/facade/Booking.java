@@ -5,6 +5,15 @@ import tj.sse.playItems.reschain.WandGame;
 import tj.sse.playItems.observer.PotionsClass;
 import tj.sse.playItems.template.templatemethod;
 import tj.sse.playItems.decorator.RobotGame;
+
+/**
+ * @Classname Booking
+ * @Description Offering united interface for other system, actually hoping to
+ *                  hide the complicity of inner system.
+ * @Author Mocha
+ * @Date 2021/10/22 14:52
+ * @Version 1.0
+ **/
 public class Booking {
     private WandGame wandGame = new WandGame();
     private QuidditchGame quidditch = new QuidditchGame();
@@ -12,6 +21,13 @@ public class Booking {
     private templatemethod coaster = new templatemethod();
     private RobotGame robotGame = new RobotGame();
 
+    /**
+     * @class Booking
+     * @method book
+     * @description Offering an interface which hide the split booking interface in others sub-systems
+     * @param
+     * @return boolean
+     * */
     public boolean book(String name){
         switch(name) {
             case "QuidditchGame":

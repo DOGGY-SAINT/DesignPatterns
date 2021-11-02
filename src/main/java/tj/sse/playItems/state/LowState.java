@@ -4,6 +4,7 @@ package tj.sse.playItems.state;
 public class LowState extends AbstractState {
     public LowState(ScoreContext h) {
         en = h;
+        //设定状态名称和奖品
         stateName = "Barely hit";
         gift = "Unfortunately, there are no prizes...";
         score = 0;
@@ -17,6 +18,7 @@ public class LowState extends AbstractState {
     }
 
     public void checkState() {
+        //根据分数检查状态变化
         if (score >= 51) {
             en.setState(new HighState(this));
         } else if (score >= 30) {

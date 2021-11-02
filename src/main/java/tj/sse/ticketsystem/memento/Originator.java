@@ -7,6 +7,7 @@ package tj.sse.ticketsystem.memento;
  * @Date 2021-10-10 13:00
  * @Version 1.0
  **/
+
 public class Originator {
     private String state;
 
