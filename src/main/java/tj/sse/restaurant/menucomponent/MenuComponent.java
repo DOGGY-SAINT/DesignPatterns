@@ -8,30 +8,31 @@ package tj.sse.restaurant.menucomponent;
  **/
 abstract class MenuComponent {
 
-    public abstract void notChoose();
-    public abstract void choose();
+    public abstract void notChoose();//未选择套餐时的状态函数
+    public abstract void choose();//选择套餐时的状态函数
 
     public void add(MenuComponent menu) {
             throw new UnsupportedOperationException();
         }
-
-        public void remove(MenuComponent menu) {
+    //添加新菜单
+    public void remove(MenuComponent menu) {
             throw new UnsupportedOperationException();
         }
-
-        public MenuComponent getChild(int i) {
+    //移除已有菜单
+    public MenuComponent getChild(int i) {
             throw new UnsupportedOperationException();
         }
-
-        public String getName() {
+    //得到子菜单
+    public String getName() {
             throw new UnsupportedOperationException();
         }
-
-        public double getPrice() {
+    //得到菜单名
+    public double getPrice() {
             throw new UnsupportedOperationException();
         }
-
-        public abstract void print(int level);
+    //得到菜单价格
+    public abstract void print(int level);
+    //打印菜单内容
 
     }
 
