@@ -2,7 +2,10 @@ package tj.sse.restaurant.cookingcommand;
 
 import java.util.Scanner;
 
-//调用者：服务员
+/** @Author zsy326
+ * @Description 服务员类，是命令的调用者
+ * @Date 21:30 2021/11/1
+ **/
 public class Waiter {
     private Food Chicken, Rib, ChickenRib, FrenchFries, Cola;
 
