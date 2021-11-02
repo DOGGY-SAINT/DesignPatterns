@@ -7,6 +7,8 @@ package tj.sse.playItems.visitor;
  * @Date2021/10/1819:40
  * @Version 1.0
  **/
+
+//具体元素StampRobot
 public class StampRobot implements Stamp {
 
     @Override

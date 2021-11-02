@@ -6,6 +6,7 @@ package tj.sse.playItems.visitor;
  * @Param
  * @return
  **/
+//抽象访问者接口
 public interface StampVisitor {
     public void visit(StampImplementation stampImplementation);
 

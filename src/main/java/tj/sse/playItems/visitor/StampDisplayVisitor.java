@@ -7,6 +7,8 @@ package tj.sse.playItems.visitor;
  * @Date2021/10/1514:30
  * @Version 1.0
  **/
+
+//具体访问者
 public class StampDisplayVisitor implements StampVisitor {
 
     @Override
@@ -14,6 +16,7 @@ public class StampDisplayVisitor implements StampVisitor {
         System.out.print("");
     }
 
+//    打印盖章
     @Override
     public void visit(StampPotion stampPotion){
         System.out.println("Potion class sealed");
