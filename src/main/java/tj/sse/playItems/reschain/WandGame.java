@@ -3,6 +3,10 @@ package tj.sse.playItems.reschain;
 import tj.sse.playItems.visitor.StampDisplayVisitor;
 import tj.sse.playItems.visitor.StampWand;
 
+/** @Author zsy326
+ * @Description 魔杖游戏类，将责任链模式组织在一起的总的类
+ * @Date 12:59 2021/11/2
+ **/
 public class WandGame {
 
     public void book(){

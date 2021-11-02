@@ -1,6 +1,9 @@
 package tj.sse.playItems.reschain;
 
-//具体处理者1：奥利凡德（魔杖制作师）
+/** @Author zsy326
+ * @Description 奥利凡德，为责任链上的第一个执行者，如果该游客状态为0（即尚未挑选魔杖），则输出挑选魔杖成功，并切换至下一个执行者
+ * @Date 12:57 2021/11/2
+ **/
 class Ollivander extends Staff {
     public void handleRequest(int wandState) {
         System.out.println("【Welcome to the magic house! Ollivander will select the most suitable wand for you】");

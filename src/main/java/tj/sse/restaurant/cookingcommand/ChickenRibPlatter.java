@@ -1,6 +1,9 @@
 package tj.sse.restaurant.cookingcommand;
 
-//具体命令：烤鸡排骨拼盘
+/** @Author zsy326
+ * @Description 烤鸡排骨拼盘类，对food接口的实现，有4个命令接收者
+ * @Date 21:20 2021/11/1
+ **/
 public class ChickenRibPlatter implements Food {
     //创建接收者
     private ChickenChef receiver1;
