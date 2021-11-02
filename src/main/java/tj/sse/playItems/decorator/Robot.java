@@ -8,5 +8,12 @@ package tj.sse.playItems.decorator;
  * @Version 1.0
  **/
 public interface Robot {
+    /**
+     * @class Robot
+     * @method operation
+     * @description Defining the operation to be implemented
+     * @param
+     * @return void
+     * */
     public void operation();
 }

@@ -21,6 +21,13 @@ public class Booking {
     private templatemethod coaster = new templatemethod();
     private RobotGame robotGame = new RobotGame();
 
+    /**
+     * @class Booking
+     * @method book
+     * @description Offering an interface which hide the split booking interface in others sub-systems
+     * @param
+     * @return boolean
+     * */
     public boolean book(String name){
         switch(name) {
             case "QuidditchGame":

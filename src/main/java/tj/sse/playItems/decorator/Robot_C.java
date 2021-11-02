@@ -11,11 +11,22 @@ public class Robot_C extends RobotDecorator{
     public Robot_C(Robot robot){
         super(robot);
     }
-
+    /**
+     * @class Robot_C
+     * @method Shoot
+     * @description Added operation for a robot
+     * */
     public void Shoot(){
         System.out.println("Added function: I can also shoot at enemy!");
     }
 
+    /**
+     * @class Robot_C
+     * @method operation
+     * @description Implement the methods in the abstract interface:Robot
+     * @param
+     * @return void
+     * */
     @Override
     public void operation() {
         super.operation();

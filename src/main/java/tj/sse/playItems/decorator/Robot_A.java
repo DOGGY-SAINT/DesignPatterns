@@ -13,10 +13,22 @@ public class Robot_A extends RobotDecorator{
         super(robot);
     }
 
+    /**
+     * @class Robo_A
+     * @method Fetch
+     * @description Added operation for a robot
+     * */
     public void Fetch(){
         System.out.println("New function: I can also fetch things from ground!");
     }
 
+    /**
+     * @class Robot_A
+     * @method operation
+     * @description Implement the methods in the abstract interface:Robot
+     * @param
+     * @return void
+     * */
     @Override
     public void operation() {
         super.operation();

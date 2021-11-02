@@ -13,10 +13,23 @@ import tj.sse.playItems.visitor.StampRobot;
  **/
 public class RobotGame {
 
+    /**
+     * @class RobotGame
+     * @method book
+     * @description Offering a booking interface for upper systems
+     * @param
+     * @return void
+     * */
     public void book(){
         System.out.println("——————————————Congratulations on booking Robot Game successfully!——————————————\n");
     }
-
+    /**
+     * @class RobotGame
+     * @method play
+     * @description Offering a playing interface for upper systems
+     * @param
+     * @return void
+     * */
     public void play(){
         System.out.println("--------------------");
         System.out.println("You have got a new basic robot!\n" +
@@ -41,6 +54,14 @@ public class RobotGame {
 
         this.end();
     }
+
+    /**
+     * @class RobotGame
+     * @method end
+     * @description Offering a end interface for upper systems
+     * @param
+     * @return void
+     * */
     private void end(){
         StampRobot rb = new StampRobot();
         StampDisplayVisitor sdv=new StampDisplayVisitor();

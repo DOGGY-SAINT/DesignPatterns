@@ -11,9 +11,21 @@ package tj.sse.playItems.decorator;
  **/
 public class RobotDecorator implements Robot{
     private Robot robot;
+    /**
+     * @class RobotDecorator
+     * @description
+     * */
     public RobotDecorator(Robot robot){
         this.robot = robot;
     }
+
+    /**
+     * @class RobotDecorator
+     * @method operation
+     * @description Implement the methods in the abstract interface:Robot
+     * @param
+     * @return void
+     * */
     @Override
     public void operation() {
         robot.operation();

@@ -42,31 +42,61 @@ public class PlayTest {
                     for(int i = 0; i < path.length; i++){
                         book.book(path[i]);
                     }
-                    choice = AppTest.scanner.next();
+                    while (true){
+                        choice = AppTest.scanner.next();
+                        if(choice.equals("GO")||choice.equals("go")){
+                            break;
+                        }
+                    }
                     System.out.println("THE GAME SEQUENCE:");
                     for(Route route = spotsName.getRoute(); route.hasNext();){
                         String name=(String)route.next();
                         System.out.println("Game Name:"+name);
                     }
-                    choice = AppTest.scanner.next();
+                    while (true){
+                        choice = AppTest.scanner.next();
+                        if(choice.equals("GO")||choice.equals("go")){
+                            break;
+                        }
+                    }
                     System.out.println("-----Quidditch----");
                     QuidditchGame quidditch = new QuidditchGame();
                     quidditch.play();
-                    choice = AppTest.scanner.next();
+                    while (true){
+                        choice = AppTest.scanner.next();
+                        if(choice.equals("GO")||choice.equals("go")){
+                            break;
+                        }
+                    }
                     System.out.println("----WandGame----");
                     WandGame wandGame = new WandGame();
                     wandGame.play();
-                    choice = AppTest.scanner.next();
+                    while (true){
+                        choice = AppTest.scanner.next();
+                        if(choice.equals("GO")||choice.equals("go")){
+                            break;
+                        }
+                    }
                     System.out.println("-----PotionClass------");
                     PotionsClass potionClass = new PotionsClass();
                     potionClass.play();
-                    choice = AppTest.scanner.next();
+                    while (true){
+                        choice = AppTest.scanner.next();
+                        if(choice.equals("GO")||choice.equals("go")){
+                            break;
+                        }
+                    }
                     templatemethod coaster = new templatemethod();
                     System.out.println("-----JurassicFlyerscoaster------");
                     coaster.playJurassicFlyersCoaster();
                     System.out.println("-----DeceptiCoaster----");
                     coaster.playDecepticoaster();
-                    choice = AppTest.scanner.next();
+                    while (true){
+                        choice = AppTest.scanner.next();
+                        if(choice.equals("GO")||choice.equals("go")){
+                            break;
+                        }
+                    }
                     System.out.println("-----Robot Game------");
                     RobotGame robotGame = new RobotGame();
                     robotGame.play();
