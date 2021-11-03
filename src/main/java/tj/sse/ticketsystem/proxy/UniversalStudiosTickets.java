@@ -9,14 +9,6 @@ import java.util.Objects;
 import static tj.sse.ticketsystem.flyweight.FlyweightFactory.getFlyweight;
 
 //真实主题：环球影城门票
-//public class UniversalStudiosTickets implements Ticket {
-//    public void display() {
-//        InfoRecovery.infoRecovery();
-//        ChooseTicket.main();
-//        CheckCOVID19.checkCOVID19();
-//    }
-//}
-
 public class UniversalStudiosTickets implements Ticket{
     public int type=-1;
     private Originator or = new Originator();
@@ -27,6 +19,7 @@ public class UniversalStudiosTickets implements Ticket{
         return type;
     }
 
+    //用户交互
     public void infoInput(String cmd){
         if(Objects.equals(cmd,"#input")){
             type=1;
@@ -67,6 +60,7 @@ public class UniversalStudiosTickets implements Ticket{
         type=0;
     }
 
+    //选择票种
     public void chooseTicket(String cmd){
         if (Objects.equals(cmd,"#1")){
             getFlyweight("Adult tickets");
@@ -95,6 +89,7 @@ public class UniversalStudiosTickets implements Ticket{
         type++;
     }
 
+    //新冠病毒排查
     public void checkVOCUD19(String cmd){
         if (Objects.equals(cmd,"#1")){
             condition.freeRide("UniversalStudio in Beijing");
@@ -123,6 +118,7 @@ public class UniversalStudiosTickets implements Ticket{
         type=-2;
     }
 
+    //响应用户请求
     public void request(int type,String req){
         if(type==0||type==-1)
             infoInput(req);
@@ -136,6 +132,7 @@ public class UniversalStudiosTickets implements Ticket{
             checkVOCUD19(req);
     }
 
+    //提示用户输入信息
     public void ask(){
         if(type==0||type==-1){
             System.out.println("input information：#input");
