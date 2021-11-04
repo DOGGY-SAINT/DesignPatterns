@@ -4,17 +4,35 @@ import org.junit.jupiter.api.Test;
 import tj.sse.AppTest;
 
 import tj.sse.ticketsystem.proxy.*;
+import tj.sse.ticketsystem.frontcontroller.FrontController;
 
 import java.util.Objects;
 
 public class TicketSystemTest {
     @Test
     public void test() {
-        System.out.println("---------------  [Test] proxy   ---------------");
+        FrontController frontController = new FrontController();
         UniversalStudiosTickets target = new UniversalStudiosTickets();
         //代理对象,把目标对象传给代理对象,建立代理关系
         Ticket ticket=null;
         if (AppTest.input) {
+            System.out.println("---------------  [Test] FrontController   ---------------");
+            System.out.println("please enter the 'BUYER' or 'SELLER' to log in the system.");
+            while(true) {
+                String view = AppTest.scanner.next();
+                if (Objects.equals(view, "BUYER")) {
+                    frontController.dispatchRequest("BUYER");
+                    break;
+                } else if (Objects.equals(view, "SELLER")) {
+                    frontController.dispatchRequest("SELLER");
+                    break;
+                } else {
+                    System.out.println("please input the valid command.");
+                }
+            }
+            System.out.println("---------------  [End]  ---------------");
+
+            System.out.println("---------------  [Test] proxy   ---------------");
             while (true) {
                 if(ticket==null){
                     System.out.println("Choose to purchase through Meituan：#1");
@@ -41,6 +59,12 @@ public class TicketSystemTest {
                 }
             }
         } else {
+            System.out.println("---------------  [Test] FrontController   ---------------");
+            frontController.dispatchRequest("BUYER");
+            frontController.dispatchRequest("SELLER");
+            System.out.println("---------------  [End]  ---------------");
+
+            System.out.println("---------------  [Test] proxy   ---------------");
             ticket=new MeiTuan(target);
             ticket.ask();
             System.out.println("#exit");
@@ -80,6 +104,7 @@ public class TicketSystemTest {
             ticket.ask();
             System.out.println("#2");
             ticket.display("#2");
+            System.out.println("--------------------- [End]  ----------------------");
         }
         System.out.println("--------------------- [End]  ----------------------");
     }
