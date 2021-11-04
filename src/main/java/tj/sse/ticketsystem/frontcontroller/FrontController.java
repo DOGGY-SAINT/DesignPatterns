@@ -1,28 +1,17 @@
 package tj.sse.ticketsystem.frontcontroller;
 
 /**
- * @Classname FrontEndController
+ * @Classname FrontController
  * @Description 前端控制器
  * @Author shenxingyu
  * @Date 2021-11-5 15:20
  * @Version 1.0
  **/
-public class FrontEndController {
+public class FrontController {
     /**
      * @Description 调度器
      **/
-    private Dispatcher dispatcher;
-
-    /**
-     * @class FrontController
-     * @method FrontController
-     * @description 构造函数，生成调度器实例
-     * @param []
-     * @return void
-     * */
-    public void FrontController(){
-        dispatcher = new Dispatcher();
-    }
+    private Dispatcher dispatcher = new Dispatcher();
 
     /**
      * @class FrontController
