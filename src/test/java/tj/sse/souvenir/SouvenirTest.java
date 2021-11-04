@@ -15,7 +15,7 @@ public class SouvenirTest {
     @Test
     public void test(){
         System.out.println("--------------------- [Souvenir Test] -------------------");
-        // 原型模式&抽象工厂模式测试
+        // 抽象工厂模式测试
         Mediator md = new ConcreteMediator();
         Trader c1, c2;
         c1 = new ConcreteTrader1();

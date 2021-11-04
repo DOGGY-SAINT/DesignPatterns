@@ -8,6 +8,7 @@ public class MeiTuan implements Ticket{
         this.realSubject=target;
     }
 
+    //询问用户请求
     @Override
     public void ask() {
         if(realSubject.type==-1)
@@ -15,6 +16,7 @@ public class MeiTuan implements Ticket{
         realSubject.ask();
     }
 
+    //代理购票
     public int display(String req) {
         realSubject.display(req);
         if(realSubject.type==-2)
