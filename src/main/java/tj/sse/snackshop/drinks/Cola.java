@@ -17,4 +17,16 @@ public class Cola implements Drinks{
     public String getInf() {
         return "This is a Cola";
     }
+
+    /**
+     *@Author tianxi
+     *@Description 判断饮料是否为空
+     *@Date 23:33 2021-11-04
+     *@Param []
+     *@return boolean
+     **/
+    @Override
+    public boolean isNull(){
+        return false;
+    }
 }
