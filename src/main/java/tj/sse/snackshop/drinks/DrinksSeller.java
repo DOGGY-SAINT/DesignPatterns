@@ -9,7 +9,7 @@ public class DrinksSeller {
     /**
      * @description 货架
      * */
-    private Shelf[] shelves={new ColaShelf(),new FantaShelf()};
+    private Shelf[] shelves={new ColaShelf(),new FantaShelf(),new NullShelf()};
 
     /**
      * @class DrinksSeller
@@ -23,6 +23,8 @@ public class DrinksSeller {
             return shelves[0].getDrinks();
         else if(name.equals("Fanta"))
             return shelves[1].getDrinks();
-        return null;
+        else{
+            return shelves[shelves.length-1].getDrinks();
+        }
     }
 }

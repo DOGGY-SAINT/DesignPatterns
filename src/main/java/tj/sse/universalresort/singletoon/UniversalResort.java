@@ -1,4 +1,4 @@
-package tj.sse.universalresort;
+package tj.sse.universalresort.singletoon;
 
 /**
  * @author DOGGY_LEE
