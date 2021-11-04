@@ -1,7 +1,11 @@
 package tj.sse.playItems.decorator;
 
+import tj.sse.playItems.utils.Visitor;
 import tj.sse.playItems.visitor.StampDisplayVisitor;
 import tj.sse.playItems.visitor.StampRobot;
+import tj.sse.playItems.specification.VisitorAgeLessThanSpec;
+import tj.sse.playItems.specification.VisitorHeightLessThanSpec;
+import tj.sse.playItems.specification.VisitorGenderSpec;
 
 /**
  * @Classname RobotGame
@@ -12,7 +16,23 @@ import tj.sse.playItems.visitor.StampRobot;
  * @Version 1.0
  **/
 public class RobotGame {
-
+    private Visitor vs;
+    private void setVisitor(Visitor vs) {
+        this.vs = vs;
+    }
+    private boolean canPlay(Visitor vs) {
+        VisitorAgeLessThanSpec ageCheck = new VisitorAgeLessThanSpec(18);
+        VisitorHeightLessThanSpec heightCheck = new VisitorHeightLessThanSpec(165);
+        if(!ageCheck.isSatisfiedBy(vs))
+            System.out.println(vs.getName() + " dose not meet age requirement");
+        if(!heightCheck.isSatisfiedBy(vs))
+            System.out.println(vs.getName() + " dose not meet height requirement");
+        if(ageCheck.isSatisfiedBy(vs) && heightCheck.isSatisfiedBy(vs)){
+            System.out.println(vs.getName() + " meet all the requirement !");
+            return true;
+        }
+        return false;
+    }
     /**
      * @class RobotGame
      * @method book
@@ -30,7 +50,12 @@ public class RobotGame {
      * @param
      * @return void
      * */
-    public void play(){
+    public void play(Visitor vs_new){
+        this.vs = vs_new;
+
+        if( !canPlay(vs) )
+            return;
+
         System.out.println("--------------------");
         System.out.println("You have got a new basic robot!\n" +
                 "Try what it can do!");

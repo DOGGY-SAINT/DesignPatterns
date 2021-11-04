@@ -12,16 +12,31 @@ import tj.sse.playItems.state.QuidditchGame;
 import tj.sse.playItems.template.templatemethod;
 import tj.sse.playItems.visitor.StampDisplayVisitor;
 import tj.sse.playItems.visitor.StampQuidditch;
+import tj.sse.playItems.utils.Visitor;
+import tj.sse.playItems.utils.Gender;
+import tj.sse.playItems.transfer.*;
 
 import java.util.Arrays;
+import java.util.Locale;
 
 
 /**git
  * 娱乐项目的测试
  */
 public class PlayTest {
+
     @Test
     public void test(){
+        Visitor vs01 = new Visitor("Mike");
+        vs01.setAge(18);
+        vs01.setHeight(175.0);
+        Visitor vs02 = new Visitor("Jenny");
+        vs02.setAge(15);
+        vs01.setHeight(167.0);
+        Visitor vs03 = new Visitor("Jack");
+        vs03.setAge(22);
+        vs01.setHeight(180.0);
+
         System.out.println("--------------------------------- [Playitems Test] --------------------------------");
         //一些变量声明
         tj.sse.playItems.route.strategy.strategyA Route=new tj.sse.playItems.route.strategy.strategyA();
@@ -37,6 +52,15 @@ public class PlayTest {
                 if(choice.equals("N"))
                     break;
                 else if(choice.equals("Y")){
+                    PlayerBO playerBusinessObject = new PlayerBO();
+
+                    //输出所有的玩家
+                    for (PlayerVO player : playerBusinessObject.getAllPlayers()) {
+                        System.out.println("Players' name for this round: [RollNo : "
+                                +player.getRollNo()+", Name : "+player.getName()+" ]");
+                    }
+
+
                     //交互模式
                     Booking book = new Booking();
                     for(int i = 0; i < path.length; i++){
@@ -61,7 +85,8 @@ public class PlayTest {
                     }
                     System.out.println("-----Quidditch----");
                     QuidditchGame quidditch = new QuidditchGame();
-                    quidditch.play();
+                    quidditch.play(vs02);
+                    quidditch.play(vs03);
                     while (true){
                         choice = AppTest.scanner.next();
                         if(choice.equals("GO")||choice.equals("go")){
@@ -70,7 +95,8 @@ public class PlayTest {
                     }
                     System.out.println("----WandGame----");
                     WandGame wandGame = new WandGame();
-                    wandGame.play();
+                    wandGame.play(vs02);
+                    wandGame.play(vs03);
                     while (true){
                         choice = AppTest.scanner.next();
                         if(choice.equals("GO")||choice.equals("go")){
@@ -79,7 +105,8 @@ public class PlayTest {
                     }
                     System.out.println("-----PotionClass------");
                     PotionsClass potionClass = new PotionsClass();
-                    potionClass.play();
+                    potionClass.play(vs02);
+                    potionClass.play(vs03);
                     while (true){
                         choice = AppTest.scanner.next();
                         if(choice.equals("GO")||choice.equals("go")){
@@ -93,13 +120,15 @@ public class PlayTest {
                     coaster.playDecepticoaster();
                     while (true){
                         choice = AppTest.scanner.next();
+//                        choice.toUpperCase(Locale.ROOT);
                         if(choice.equals("GO")||choice.equals("go")){
                             break;
                         }
                     }
                     System.out.println("-----Robot Game------");
                     RobotGame robotGame = new RobotGame();
-                    robotGame.play();
+                    robotGame.play(vs02);
+                    robotGame.play(vs03);
 
                     break;
                 }
@@ -107,6 +136,14 @@ public class PlayTest {
                     System.out.println("error");
             }
         }else{
+            PlayerBO playerBusinessObject = new PlayerBO();
+
+            //输出所有的玩家
+            for (PlayerVO player : playerBusinessObject.getAllPlayers()) {
+                System.out.println("Players' name for this round: [RollNo : "
+                        +player.getRollNo()+", Name : "+player.getName()+" ]");
+            }
+
             System.out.println("---------------- [Test] Strategy ----------------");
             System.out.println(Arrays.toString(Route.provideSuggestions()));
             System.out.println("--------------------- [End] ---------------------");
@@ -136,19 +173,22 @@ public class PlayTest {
             System.out.println("---------------- [Test] State ----------------");
             System.out.println("-----Quidditch----");
             QuidditchGame quidditch = new QuidditchGame();
-            quidditch.play();
+            quidditch.play(vs02);
+            quidditch.play(vs03);
             System.out.println("--------------------- [End] ---------------------");
 
             System.out.println("---------------- [Test] Chain Of Responsibility ----------------");
             System.out.println("----WandGame----");
             WandGame wandGame = new WandGame();
-            wandGame.play();
+            wandGame.play(vs02);
+            wandGame.play(vs03);
             System.out.println("--------------------- [End] ---------------------");
 
             System.out.println("---------------- [Test] Observer ----------------");
             System.out.println("-----PotionClass------");
             PotionsClass potionClass = new PotionsClass();
-            potionClass.play();
+            potionClass.play(vs02);
+            potionClass.play(vs03);
             System.out.println("--------------------- [End] ---------------------");
 
             System.out.println("---------------- [Test] Template Method ----------------");
@@ -162,7 +202,8 @@ public class PlayTest {
             System.out.println("---------------- [Test] Decorator ----------------");
             System.out.println("-----Robot Game------");
             RobotGame robotGame = new RobotGame();
-            robotGame.play();
+            robotGame.play(vs02);
+            robotGame.play(vs03);
 
         }
         System.out.println("----------------------------------------[End]---------------------------------------------");
