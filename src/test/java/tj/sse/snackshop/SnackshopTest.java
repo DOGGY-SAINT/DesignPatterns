@@ -31,18 +31,15 @@ public class SnackshopTest {
                 System.out.println("Select the above serial number:");
                 int i= AppTest.scanner.nextInt();
                 if(i==1){
-                    System.out.println("------------ [Test] Factory Method ------------");
+                    System.out.println("--- [Test] Factory Method and NullObject ---");
                     System.out.println("Do you want Fanta or Cola?:");
                     String str= AppTest.scanner.next();
                     DrinksSeller seller=new DrinksSeller();
                     Drinks mt;
                     mt=seller.getDrinks(str);
-                    if(mt==null)
-                        System.out.println(str+" not exist");
-                    else{
-                        System.out.println("With a spell, your hands appeared out of thin air:");
-                        System.out.println(mt.getInf());
-                    }
+                    System.out.println("With a spell, your hands appeared out of thin air:");
+                    System.out.println(mt.getInf());
+
                 }
                 else if(i==2){
                     System.out.println("--------------- [Test] Adapter ---------------");
@@ -109,12 +106,14 @@ public class SnackshopTest {
             }
         }
         else{
-            System.out.println("----------- [Test] Factory Method ----------");
+            System.out.println("--- [Test] Factory Method and NullObject ---");
             DrinksSeller seller=new DrinksSeller();
             Drinks dk;
             dk=seller.getDrinks("Cola");
             System.out.println(dk.getInf());
             dk=seller.getDrinks("Fanta");;
+            System.out.println(dk.getInf());
+            dk=seller.getDrinks("Sprite");;
             System.out.println(dk.getInf());
             System.out.println("------------------- [End] ------------------");
 
