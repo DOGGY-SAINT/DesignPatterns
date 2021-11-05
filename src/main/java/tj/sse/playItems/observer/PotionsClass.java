@@ -27,13 +27,16 @@ public class PotionsClass {
     }
 
     public void book(){
-        System.out.println("——————————————Congratulations on booking the Potions class Experience——————————————\n");
+        System.out.println("———————————————————————Congratulations on booking the Potions class Experience————————————————————————\n");
     };
     public void play(Visitor vs_new){
         this.vs = vs_new;
 
         if( !canPlay(vs) )
             return;
+        else{
+            System.out.println(vs.getName() + " meet all requirements and are allowed to go on");
+        }
         BellEventSource bell = new BellEventSource();    //铃（事件源）
         bell.addPersonListener(new TeachEventListener()); //注册监听器（魔药课斯内普教授）
         bell.addPersonListener(new StuEventListener());    //注册监听器（刚入学的小魔法师）

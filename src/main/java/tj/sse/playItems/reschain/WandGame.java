@@ -39,7 +39,9 @@ public class WandGame {
         if( !canPlay(vs) ){
             return;
         }
-
+        else{
+            System.out.println(vs.getName() + " meet all requirements and are allowed to go on");
+        }
         //组装责任链
         Staff staff1 = new Ollivander();
         Staff staff2 = new Cashier();
