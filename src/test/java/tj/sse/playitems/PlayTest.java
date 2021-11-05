@@ -79,7 +79,7 @@ public class PlayTest {
                     }
 
                     System.out.println("---------------------------------------");
-                    System.out.println("|----------strategy pattern-----------|");
+                    System.out.println("|-----------iterator pattern-----------|");
                     System.out.println("---------------------------------------");
 
                     System.out.println("THE GAME SEQUENCE:");
