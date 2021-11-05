@@ -26,14 +26,16 @@ public class QuidditchGame {
     }
 
     public void book(){
-        System.out.println("——————————————Congratulations on booking your Quidditch——————————————\n");
+        System.out.println("——————————————————————————————Congratulations on booking your Quidditch——————————————————————————————\n");
     };
 
     public void play(Visitor vs_new){
         this.vs = vs_new;
 
-        if( !canPlay(vs) )
+        if( !canPlay(vs) ){
             return;
+        }
+
         ScoreContext account = new ScoreContext();
         System.out.println("Quidditch performance status：");
         //五轮游戏
