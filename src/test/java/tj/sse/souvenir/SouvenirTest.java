@@ -5,10 +5,11 @@ import tj.sse.AppTest;
 import tj.sse.souvenir.mediator.*;
 import tj.sse.souvenir.prototype.*;
 import tj.sse.souvenir.abstractfactory.*;
+import tj.sse.souvenir.dataaccessobjectpattern.*;
 
 /**
- * @author DOGGY_LEE
- * @date 2021/11/1 16:47
+ * @author ZYX
+ * @date 2021/11/5 16:47
  * @description 纪念品测试
  */
 public class SouvenirTest {
@@ -23,8 +24,18 @@ public class SouvenirTest {
         md.register(c1);
         md.register(c2);
 
+        SouvenirDao souvenirDao = new SouvenirDaoImpl();
+
         if(AppTest.input){
             while (true){
+                //输出所有的纪念品
+                System.out.println("--------------- [Test] Data Access Object Pattern -------------");
+                for (PrototypeSouvenir souv1 : souvenirDao.getAllSouvenir()) {
+                    System.out.println("Souvernir: [RollNo : "
+                            +souv1.getRollNo()+", Name : "+souv1.getName()+" ]");
+                }
+
+                System.out.println("--------------- [Test] Abstract Factory -------------");
                 System.out.println("\n【Choose souvenir: What kind of souvenir do you want ？（doll/keybuckle）】");
                 String chooseSouvernir=AppTest.scanner.next();
                 if(chooseSouvernir.equalsIgnoreCase("doll")||chooseSouvernir.equalsIgnoreCase("keybuckle")){
@@ -68,6 +79,7 @@ public class SouvenirTest {
                     continue;
                 }
 
+                System.out.println("-------------------- [Mediator Test] -------------------");
                 System.out.println("\n【Souvenir agent: Do you want to enter souvenirs market？（Y/N）】");
                 String choice2;
                 choice2 = AppTest.scanner.next();
@@ -82,6 +94,7 @@ public class SouvenirTest {
                 else
                     System.out.println("error");
 
+                System.out.println("--------------- [Test] Prototype -------------");
                 System.out.println("\n【Souvenir agent: Do you want to clone your souvenir ？（Y/N）】");
                 String choice=AppTest.scanner.next();
                 if(choice.equalsIgnoreCase("N")){
@@ -102,6 +115,12 @@ public class SouvenirTest {
                     System.out.println("Input error：Please input single Y or N.");
             }
         }else{
+            //输出所有的纪念品
+            System.out.println("--------------- [Test] Data Access Object Pattern -------------");
+            for (PrototypeSouvenir souv1 : souvenirDao.getAllSouvenir()) {
+                System.out.println("Souvenir: [RollNo : "
+                        +souv1.getRollNo()+", Name : "+souv1.getName()+" ]");
+            }
             System.out.println("--------------- [Test] Abstract Factory -------------");
             AbstractFactory souvenirFactory = FactoryProducer.getFactory("doll");
             AbstractFactory movieIpFactory=FactoryProducer.getFactory("keybuckle");
