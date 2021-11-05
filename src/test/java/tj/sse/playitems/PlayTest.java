@@ -27,13 +27,13 @@ public class PlayTest {
 
     @Test
     public void test(){
-        Visitor vs01 = new Visitor("Mike");
+        Visitor vs01 = new Visitor("Robert");
         vs01.setAge(18);
         vs01.setHeight(175.0);
-        Visitor vs02 = new Visitor("Jenny");
+        Visitor vs02 = new Visitor("Robert");
         vs02.setAge(15);
         vs01.setHeight(167.0);
-        Visitor vs03 = new Visitor("Jack");
+        Visitor vs03 = new Visitor("John");
         vs03.setAge(22);
         vs01.setHeight(180.0);
 
@@ -53,14 +53,19 @@ public class PlayTest {
                     break;
                 else if(choice.equals("Y")){
                     PlayerBO playerBusinessObject = new PlayerBO();
-
+                    System.out.println("---------------------------------------");
+                    System.out.println("|-------transfer object pattern-------|");
+                    System.out.println("---------------------------------------");
                     //输出所有的玩家
+                    System.out.println("Coming Visitors: ");
                     for (PlayerVO player : playerBusinessObject.getAllPlayers()) {
                         System.out.println("Players' name for this round: [RollNo : "
                                 +player.getRollNo()+", Name : "+player.getName()+" ]");
                     }
 
-
+                    System.out.println("---------------------------------------");
+                    System.out.println("|-----------facade pattern------------|");
+                    System.out.println("---------------------------------------");
                     //交互模式
                     Booking book = new Booking();
                     for(int i = 0; i < path.length; i++){
@@ -72,6 +77,11 @@ public class PlayTest {
                             break;
                         }
                     }
+
+                    System.out.println("---------------------------------------");
+                    System.out.println("|----------strategy pattern-----------|");
+                    System.out.println("---------------------------------------");
+
                     System.out.println("THE GAME SEQUENCE:");
                     for(Route route = spotsName.getRoute(); route.hasNext();){
                         String name=(String)route.next();
@@ -83,6 +93,10 @@ public class PlayTest {
                             break;
                         }
                     }
+
+                    System.out.println("---------------------------------------");
+                    System.out.println("|------------state pattern-------------|");
+                    System.out.println("---------------------------------------");
                     System.out.println("-----Quidditch----");
                     QuidditchGame quidditch = new QuidditchGame();
                     quidditch.play(vs02);
@@ -93,6 +107,10 @@ public class PlayTest {
                             break;
                         }
                     }
+                    System.out.println("---------------------------------------");
+                    System.out.println("|-----responsibility chain pattern----|");
+                    System.out.println("---------------------------------------");
+
                     System.out.println("----WandGame----");
                     WandGame wandGame = new WandGame();
                     wandGame.play(vs02);
@@ -103,6 +121,9 @@ public class PlayTest {
                             break;
                         }
                     }
+                    System.out.println("---------------------------------------");
+                    System.out.println("|------------observer pattern----------|");
+                    System.out.println("---------------------------------------");
                     System.out.println("-----PotionClass------");
                     PotionsClass potionClass = new PotionsClass();
                     potionClass.play(vs02);
@@ -113,6 +134,9 @@ public class PlayTest {
                             break;
                         }
                     }
+                    System.out.println("---------------------------------------");
+                    System.out.println("|--------template method pattern-------|");
+                    System.out.println("---------------------------------------");
                     templatemethod coaster = new templatemethod();
                     System.out.println("-----JurassicFlyerscoaster------");
                     coaster.playJurassicFlyersCoaster();
@@ -125,6 +149,9 @@ public class PlayTest {
                             break;
                         }
                     }
+                    System.out.println("---------------------------------------");
+                    System.out.println("|----------decorator pattern----------|");
+                    System.out.println("---------------------------------------");
                     System.out.println("-----Robot Game------");
                     RobotGame robotGame = new RobotGame();
                     robotGame.play(vs02);

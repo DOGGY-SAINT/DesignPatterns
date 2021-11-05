@@ -8,10 +8,11 @@ import tj.sse.playItems.visitor.StampDecepticoaster;
 public class templatemethod {
 
     public void DecepticoasterBook(){//预定霸天虎过山车
-        System.out.println("——————————————Book Decepticoaster successfully!——————————————\n");
+        System.out.println("———————————————————————————————————Book Decepticoaster successfully!——————————————————————————————————\n");
     }
     public void JurassicFlyersCoasterBook(){//预定飞跃侏罗纪过山车
-        System.out.println("——————————————Book playJurassicFlyersCoaster successfully!——————————————\n");
+
+        System.out.println("—————————————————————————————Book playJurassicFlyersCoaster successfully!—————————————————————————————\n");
     }
     public void playDecepticoaster() { //开启霸天虎过山车之旅
         {
