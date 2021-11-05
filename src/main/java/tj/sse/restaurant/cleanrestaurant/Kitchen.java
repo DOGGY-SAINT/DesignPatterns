@@ -10,6 +10,6 @@ package tj.sse.restaurant.cleanrestaurant;
 class Kitchen implements ICleanable {//打扫厨房
 
     public void cleaned() {
-        System.out.println("完成后厨每日的清扫");
+        System.out.println("Complete the daily cleaning of the back kitchen");
     }
 }

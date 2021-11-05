@@ -10,7 +10,7 @@ package tj.sse.restaurant.cleanrestaurant;
 class Table implements ICleanable {//打扫餐桌
 
     public void cleaned() {
-        System.out.println("餐桌被清理干净");
+        System.out.println("The table is cleaned clearly");
     }
 }
 

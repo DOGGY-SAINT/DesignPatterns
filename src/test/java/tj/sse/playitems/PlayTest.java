@@ -138,11 +138,14 @@ public class PlayTest {
         }else{
             PlayerBO playerBusinessObject = new PlayerBO();
 
+            System.out.println("---------------- [Test] Transfer Object" +
+                    " ----------------");
             //输出所有的玩家
             for (PlayerVO player : playerBusinessObject.getAllPlayers()) {
                 System.out.println("Players' name for this round: [RollNo : "
                         +player.getRollNo()+", Name : "+player.getName()+" ]");
             }
+            System.out.println("--------------------- [End] ---------------------");
 
             System.out.println("---------------- [Test] Strategy ----------------");
             System.out.println(Arrays.toString(Route.provideSuggestions()));
@@ -168,6 +171,12 @@ public class PlayTest {
             StampQuidditch sq = new StampQuidditch();
             StampDisplayVisitor sdv=new StampDisplayVisitor();
             sdv.visit(sq);
+            System.out.println("--------------------- [End] ---------------------");
+
+            System.out.println("---------------- [Test] Specification ----------------");
+            QuidditchGame q =new QuidditchGame();
+            q.play(vs02);
+            q.play(vs03);
             System.out.println("--------------------- [End] ---------------------");
 
             System.out.println("---------------- [Test] State ----------------");

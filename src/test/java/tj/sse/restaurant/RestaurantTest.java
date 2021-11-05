@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import org.junit.jupiter.api.Test;
 import tj.sse.AppTest;
+import tj.sse.restaurant.cleanrestaurant.Clinet;
 import tj.sse.restaurant.menucomponent.*;
 import tj.sse.restaurant.cookingcommand.*;
 
@@ -73,8 +74,13 @@ public class RestaurantTest {
                 else
                     System.out.println("Please enter Y/N:");
             }
+            Clinet.main();
         }else{
             waiter.order2();
+            System.out.println("-----------------------[End]--------------------------");
+
+            System.out.println("------------------- [Test] Servant -------------------");
+            Clinet.main();
         }
         System.out.println("-----------------------[End]--------------------------");
     }

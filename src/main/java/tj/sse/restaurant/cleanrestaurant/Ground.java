@@ -10,6 +10,6 @@ package tj.sse.restaurant.cleanrestaurant;
 class Ground implements ICleanable {//打扫地面
 
     public void cleaned() {
-        System.out.println("地面被清理干净");
+        System.out.println("The ground is cleaned clearly");
     }
 }
