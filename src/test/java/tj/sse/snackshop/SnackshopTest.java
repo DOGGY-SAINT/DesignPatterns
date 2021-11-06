@@ -50,6 +50,7 @@ public class SnackshopTest {
                         continue;
                     }
                     IcecreamMachine im=new IcecreamMachine();
+                    System.out.println("With a spell, your hands appeared out of thin air:");
                     System.out.println(im.getIcecream(str));
                 }
                 else if(i==3) {
